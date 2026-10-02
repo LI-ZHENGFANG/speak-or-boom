@@ -1,0 +1,22 @@
+{
+  "version": "v3.0-voice",
+  "voicePack": {
+    "clips": 1608,
+    "rounds": 804,
+    "bytes": 47318976,
+    "checks": [
+      "text match",
+      "file size",
+      "sha256",
+      "MP3 header",
+      "waveform RMS and duration"
+    ]
+  },
+  "regressions": "six JavaScript suites passed",
+  "desktopTrial": "User confirmed Regular temperature is fine. completes after reading",
+  "recordedPlayback": "Chrome audition and paused user-line demo reached ended; timer remained paused",
+  "publicDeployment": "pending GitHub credential authorization and push",
+  "mobileRecordedDialogue": "pending real-device verification",
+  "wechatArticle": "13-image local draft; not published",
+  "humanListening": "Not every clip has been manually audited"
+}

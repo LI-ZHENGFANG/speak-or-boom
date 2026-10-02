@@ -1,8 +1,9 @@
 Speak or Boom · 开发交接（2026-10-03）
 作者及版权所有者：LI ZHENGFANG
 
-当前配音升级仍在生成和验证中，本文件不是上线完成的声明。
-正式交接记录将在配音包完成、GitHub 发布及设备测试后更新。
+全量配音已生成并通过 1,608 文件的台词、大小、SHA-256 和音频有效性检查。
+六组 JavaScript 回归测试已通过，电脑免费试读由用户确认完成。
+在线发布与设备验收状态请参阅 RELEASE-STATUS.json；不能视为全部设备已验收。
 
 正式练习入口：https://li-zhengfang.github.io/speak-or-boom/
 代码仓库：https://github.com/LI-ZHENGFANG/speak-or-boom
