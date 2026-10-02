@@ -40,11 +40,17 @@ def main():
     except OSError as error:
         try:
             with urllib.request.urlopen(url, timeout=2) as response:
-                body = response.read(65536).decode("utf-8", errors="replace")
-            if "<title>Speak or Boom" not in body:
-                raise ValueError("Port is used by another application")
+                body = response.read(65536)
+            if body != (directory / 'index.html').read_bytes()[:65536]:
+                raise ValueError("Port is serving another folder or an older version")
+            for name in ('app.js', 'voice-manifest.js'):
+                if not (directory / name).exists():
+                    continue
+                with urllib.request.urlopen(url + name, timeout=2) as response:
+                    if response.read() != (directory / name).read_bytes():
+                        raise ValueError("Port is serving an older version")
         except (OSError, urllib.error.URLError, ValueError):
-            print("Cannot start: port {} is unavailable: {}".format(args.port, error))
+            print("Port {} is serving another app or version. Try: py -3.8 start_local.py --port {}".format(args.port, args.port + 1))
             return 1
         print("Speak or Boom is already running at " + url)
         if not args.no_browser:
