@@ -1,5 +1,5 @@
 const fs = require('fs'), vm = require('vm'), assert = require('assert');
-const source = fs.readFileSync('app.js','utf8');
+const source = fs.readFileSync('app.js','utf8').replace(/\r\n/g,'\n');
 function part(start,end){return source.slice(source.indexOf(start),source.indexOf(end));}
 const nodes = {}, pending=[]; let microphoneStarts=0, resumes=0, frames=0;
 const c={G:{state:'waiting',scenarioId:'coffee',roundIdx:0,rounds:[{id:1,chapter:'Cafe',agent:'Hello',user:'Hi',keywords:['hi']}],stats:{pauses:0}},
