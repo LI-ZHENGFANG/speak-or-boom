@@ -74,7 +74,7 @@ function estimateWordTimings(words) {
   return words.map((w, i) => ({ word: w, startMs: i * MS_PER_WORD, endMs: (i + 1) * MS_PER_WORD }));
 }
 function needSpeakMs(words) {
-  return clamp(words.length * MS_PER_WORD, 1200, 4500);
+  return clamp(words.length * MS_PER_WORD, 350, 4500);
 }
 
 /* ================= game state ================= */

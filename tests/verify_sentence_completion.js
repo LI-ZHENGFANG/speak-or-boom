@@ -19,3 +19,6 @@ assert.equal(c.sentenceCoverage('alternate','Is there an alternate view here?')>
 assert.equal(c.sentenceCoverage('regular temperature is fine','Regular temperature is fine.'),1);
 assert.equal(c.sentenceCoverage('Can I get a medium latte please','Can I get a medium latte, please?'),1,'Comma does not block coverage');
 console.log('PASS: noisy-room pause recovery; speech still detects; short pauses do not finish; full final transcripts ignore punctuation without accepting one keyword.');
+vm.runInContext('const MS_PER_WORD=260;const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));'+s.slice(s.indexOf('function needSpeakMs('),s.indexOf('/* ================= game state')),c);
+assert.equal(c.needSpeakMs(['Yes.']),350,'Short replies must not require 1.2 seconds of artificial repetition');
+assert.equal(c.needSpeakMs('Regular temperature is fine.'.split(' ')),1040);
