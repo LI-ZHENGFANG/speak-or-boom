@@ -62,3 +62,10 @@ movies 槽位改为原创 Ship It! 第一集，10 场、140 轮、280 条 Meta A
 新生成脚本需要 Muse 的 Linux 授权 TTS 服务，不是 Windows 本地启动器；不要盲目运行旧 Kokoro 索引构建器。
 读取 scenarios/EP1-STORY-BIBLE.md、_FORMAT.md、tests/verify_story_order.js、verify_voice_assets.js。
 先前红米普通内地网络验收属于 v3.0，不能作为本集已验收的证据；当前发布状态见 RELEASE-STATUS.json。
+
+第一集发布验收：72c7289 / GitHub Pages run 37077632626 成功。公开入口不变。
+线上第一集及互换角色试听均播放结束，无捕获控制台错误/警告；app.js、movies.js、配音索引与仓库逐字节一致。
+完整 ZIP 为 42,322,713 字节，公开下载 SHA-256 与本地一致；版本固定链接见 RELEASE-STATUS.json。
+本轮可用浏览器为 Codex 内置 Chromium，不能冒称新剧集已在外部 Chrome 或红米验收。
+项目档案同步本集说明、30 个文本源码和版本固定 ZIP；后续维护先 GET /api/project 获取当前 revision。
+完整 ZIP 内的发布记录为打包时快照；最新验收状态请读 GitHub main 或实时项目档案。

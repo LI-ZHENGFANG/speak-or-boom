@@ -16,8 +16,18 @@
   "desktopTrial": "User confirmed Regular temperature is fine. completes after reading",
   "recordedPlayback": "Chrome audition and paused user-line demo reached ended; timer remained paused",
   "publicDeployment": {
-    "status": "pending push and Pages verification",
-    "url": "https://li-zhengfang.github.io/speak-or-boom/"
+    "status": "published",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/",
+    "appCommit": "72c7289965504395484dffb5b8456b22be53086a",
+    "pagesRun": "37077632626",
+    "pagesConclusion": "success",
+    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/ep1-20261003-9f61cff7.zip",
+    "packageBytes": 42322713,
+    "packageSha256": "9f61cff7df5a7f845c0b2df2ac0dfa4cf1721b4c1c667f132e04c2669bcc57e1",
+    "manifestTextMatches": true,
+    "onlineConsole": "No captured errors or warnings in fresh Chromium homepage, first partner and swapped-role auditions",
+    "onlineBytes": "app.js, movies.js and voice-manifest.js match committed files; public ZIP SHA-256 and byte size match",
+    "browserScope": "Available Codex in-app Chromium; Chrome extension unavailable for this episode audit"
   },
   "mobileRecordedDialogue": {
     "device": "Redmi Turbo 4 / Chrome",
@@ -42,12 +52,14 @@
   },
   "humanListening": "Not every clip has been manually audited",
   "archiveSite": {
-    "version": "v3.0-voice",
-    "revision": "b4657a64-1753-4969-8646-946d16cd1d01",
-    "sourceFiles": 24,
+    "version": "v3.1-ep1",
+    "status": "synchronized",
+    "revisionLookup": "GET /api/project returns the current revision; use it as expectedRevision",
+    "sourceFiles": 30,
     "sourceMatchesPackage": true,
-    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/voice-20261003-dffc009b.zip",
-    "firstReleaseEvidence": "Preserved unchanged"
+    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/ep1-20261003-9f61cff7.zip",
+    "firstReleaseEvidence": "Preserved unchanged",
+    "packageScope": "Immutable ZIP contains the release-time pending-verification record. Current verification and handoff are in GitHub main and the live archive."
   },
   "limits": [
     "Fixed scripts",
@@ -72,9 +84,10 @@
       "maxDurationDifference": 0,
       "errors": []
     },
-    "browserAudition": "Local first partner clip reached ended in Chromium; online verification pending",
+    "browserAudition": "Online first partner and swapped-role recordings both reached ended in Chromium",
     "mobileScope": "Earlier Redmi acceptance was for v3.0; this episode has not yet been accepted on the device",
-    "limits": "Original episode, not a licensed TV transcript or whole season; no full episode human listening audit"
+    "limits": "Original episode, not a licensed TV transcript or whole season; no full episode human listening audit",
+    "nativeClipSeconds": 1101.84
   },
   "previousPublicDeployment": {
     "status": "published",
