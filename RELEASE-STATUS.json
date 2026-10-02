@@ -1,9 +1,9 @@
 {
-  "version": "v3.0-voice",
+  "version": "v3.1-ep1",
   "voicePack": {
     "clips": 1608,
     "rounds": 804,
-    "bytes": 47318976,
+    "bytes": 46074424,
     "checks": [
       "text match",
       "file size",
@@ -12,19 +12,12 @@
       "waveform RMS and duration"
     ]
   },
-  "regressions": "six JavaScript suites passed",
+  "regressions": "eight Node suites passed",
   "desktopTrial": "User confirmed Regular temperature is fine. completes after reading",
   "recordedPlayback": "Chrome audition and paused user-line demo reached ended; timer remained paused",
   "publicDeployment": {
-    "status": "published",
-    "url": "https://li-zhengfang.github.io/speak-or-boom/",
-    "appCommit": "7b4a46b1a895ebefb597bcc93301e835dbc23a73",
-    "pagesRun": "37069077610",
-    "pagesConclusion": "success",
-    "packageBytes": 43427220,
-    "packageSha256": "dffc009bdbc633c747140988b1c53c78329728855ded77b67e146e934d33c676",
-    "manifestTextMatches": true,
-    "onlineConsole": "No captured errors or warnings on fresh Chrome homepage audition"
+    "status": "pending push and Pages verification",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/"
   },
   "mobileRecordedDialogue": {
     "device": "Redmi Turbo 4 / Chrome",
@@ -62,5 +55,36 @@
     "VAD is not pronunciation scoring",
     "Not every audio clip manually heard",
     "Mainland access evidence limited to the reported device/network/time"
-  ]
+  ],
+  "episodeUpdate": {
+    "title": "Ship It! Ep.1: Demo Day Disaster",
+    "origin": "Muse ep1-changes.zip export of commit 555726d",
+    "inputZipSha256": "967097d5e8e13893c503deba52968bcf9c21ba14025657def49ca3d75f29bd5e",
+    "scenes": 10,
+    "rounds": 140,
+    "clips": 280,
+    "orderedOnEveryPass": true,
+    "localChecks": "Eight Node suites passed; all 1608 text mappings, hashes, sizes and headers checked; non-movie mappings unchanged",
+    "browserDecode": {
+      "status": "PASS",
+      "clips": 280,
+      "minRms": 0.009791455931716242,
+      "maxDurationDifference": 0,
+      "errors": []
+    },
+    "browserAudition": "Local first partner clip reached ended in Chromium; online verification pending",
+    "mobileScope": "Earlier Redmi acceptance was for v3.0; this episode has not yet been accepted on the device",
+    "limits": "Original episode, not a licensed TV transcript or whole season; no full episode human listening audit"
+  },
+  "previousPublicDeployment": {
+    "status": "published",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/",
+    "appCommit": "7b4a46b1a895ebefb597bcc93301e835dbc23a73",
+    "pagesRun": "37069077610",
+    "pagesConclusion": "success",
+    "packageBytes": 43427220,
+    "packageSha256": "dffc009bdbc633c747140988b1c53c78329728855ded77b67e146e934d33c676",
+    "manifestTextMatches": true,
+    "onlineConsole": "No captured errors or warnings on fresh Chrome homepage audition"
+  }
 }

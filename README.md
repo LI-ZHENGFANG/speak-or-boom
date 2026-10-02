@@ -60,15 +60,18 @@ speak-or-boom/
 │   ├── hotel.js      # Hotel — 144 rounds
 │   ├── interview.js  # Job Interview — 144 rounds
 │   ├── restaurant.js # Restaurant — 144 rounds
-│   └── movies.js     # Classic Movies — 140 rounds of iconic quotes & role-play
+│   └── movies.js     # Ship It! Ep.1: Demo Day Disaster — 140 rounds, original workplace sitcom
 └── README.md
 ```
 
 Each scenario is a self-contained JS file that registers itself on
 `window.SPEAK_OR_BOOM_SCENARIOS` (see `scenarios/_FORMAT.md` to add your own).
-Every scenario is built to sustain a full 60-minute session: with ~140+ rounds
-each pass lasts 25–35 minutes, and when the script ends the chapters are
-**reshuffled** and the run continues — no two loops play in the same order.
+The movies slot now contains **Ship It! Ep.1: Demo Day Disaster**, an original
+workplace sitcom with 10 scenes and 140 rounds. You play Mia and respond to Jake
+and Lucy. Scenes run in story order on every pass, including with reversed roles.
+The other five scenarios continue to shuffle chapters while keeping each
+chapter's dialogue order. The 60-minute option repeats material after a complete
+pass; it is not a one-hour film or a complete TV season.
 
 ## How detection works (MVP)
 
@@ -85,7 +88,7 @@ barista's TTS is playing, and never during line transitions.
 
 ## Notes / limitations
 
-- 60-minute mode reshuffles and loops the selected scenario with an on-screen notice
+- 60-minute mode loops the selected scenario with an on-screen notice; Ship It! preserves story order, other scenarios reshuffle chapters
   ("looping for endurance") until the timer ends. This includes repeated material.
 - Switching to another app or tab automatically pauses the session.
 - Data (balance, sessions, wins, fails, speaking time, longest win) persists in
@@ -100,8 +103,18 @@ Developer and copyright owner: LI ZHENGFANG.
 
 ## Voice controls
 
-All 804 rounds have both sides voiced: 1,608 bundled MP3 files. Default playback uses the same American English clips on phone and computer. These are locally generated voices, not human actor or original film recordings; see VOICE-NOTICE.txt for provenance. No voice model or generation dependencies run in the web application.
+All 804 rounds have both sides voiced: 1,608 bundled MP3 files. Default playback uses the same American English clips on phone and computer. The five everyday scenes use local Kokoro recordings; Ship It! Ep.1 uses Meta AI synthetic voices supplied with the Muse update. These are not human actor or original film recordings; see VOICE-NOTICE.txt for provenance. No voice model or generation dependencies run in the web application.
 
 Rate defaults to 0.75; home and pause screens allow 0.60–1.10. 1.00 is the original recording speed. The voice selector also offers device system voices as an explicit alternative. Preferences persist under `speakOrBoom.voice.v1`. Playback must end successfully before the user's silence timer begins. Errors pause the session.
 
 Keep the complete audio/ directory when extracting the ZIP. The separately exported inline HTML still needs sibling audio/ and downloads/ directories; it is not a single-file offline application. Subtitle highlighting estimates voiced progress, not exact word alignment. The scripts are fixed, not language-model conversation.
+
+## Episode maintenance
+
+Read scenarios/EP1-STORY-BIBLE.md and scenarios/_FORMAT.md before adding episodes.
+Muse supplied 280 Ep.1 clips and their text/hash mapping. Its generation helpers
+in tools/generate_ep1_voice.py and tools/rebuild_manifest_ep1.py require Muse's
+Linux environment, its authorized /opt/hatch/bin/tts service and Node/ffprobe;
+they are not Windows launchers or web runtime dependencies. Do not run the old
+Kokoro manifest builder blindly: it will overwrite this episode's voice mapping.
+See HANDOFF.txt and RELEASE-STATUS.json for actual verification evidence.

@@ -16,6 +16,7 @@ The file registers itself on `window.SPEAK_OR_BOOM_SCENARIOS`.
     tagline: '<Short line>',    // e.g. 'Check-in to Takeoff'
     speaker: '<LABEL>',         // default on-screen label for the "other" side, UPPERCASE, e.g. 'AGENT'
     difficulty: 'Beginner|Intermediate|Advanced',
+    ordered: true,             // continuous story only; omit for shuffled drills
     rounds: [
       {
         id: '<id>-001',                       // unique string within the file
@@ -51,10 +52,13 @@ The file registers itself on `window.SPEAK_OR_BOOM_SCENARIOS`.
    a polite complaint, a number, a time, etc.). No "Yes." / "OK." one-word user lines.
 8. **Variety:** rotate user-line patterns — statements, questions, requests, refusals,
    clarifications, numbers/times, polite complaints, small talk.
-9. **Movie scenarios:** use SHORT iconic quotes only (1–2 lines, the kind everyone quotes).
-   Do NOT reproduce long verbatim scenes. Mix: (a) famous quote to repeat,
-   (b) simple role-play where the player answers in character.
-   Agent lines give one sentence of scene context, then the quote setup.
+9. **Series episodes (the `movies` scenario):** this scenario is an ORIGINAL series
+   ("Ship It!"), not quotes from real films. Write it like a sitcom episode:
+   complete story arc, named characters with consistent relationships, running
+   gags and callbacks across scenes, continuous Q&A dialogue. Set ordered: true. Chapters are
+   scenes in story order on every pass, including role reversal. Do NOT reproduce copyrighted film/TV dialogue beyond
+   short iconic quotes; when in doubt, write original lines. Each episode is
+   one self-contained file; future episodes extend the series.
 10. **IDs:** unique strings, sequential, e.g. `airport-001` … `airport-144`.
 11. File must define NOTHING except the registration IIFE (no globals, no console.log).
     End the file with `})();`.

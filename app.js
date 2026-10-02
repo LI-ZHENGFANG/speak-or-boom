@@ -48,9 +48,9 @@ function practiceRounds(rounds) {
   }));
 }
 function speakerLabel(round, sc) { return String(round.speaker || sc.speaker || 'VOICE').toUpperCase(); }
-// Build play order: chapters shuffled, round order within a chapter preserved.
-// Reshuffled every loop so hour-long sessions stay fresh.
-function buildPlayOrder(rounds) {
+// Continuous stories keep their order. Other scenarios shuffle chapters.
+function buildPlayOrder(rounds, scenario) {
+  if (scenario && scenario.ordered) return rounds.slice();
   const byChapter = [];
   const seen = Object.create(null);
   rounds.forEach(r => {
@@ -604,7 +604,7 @@ async function runRound() {
   // --- barista phase: silence timer MUST NOT run here ---
   G.state = 'barista';
   stopRec();
-  $('chapter-tag').textContent = 'Chapter · ' + round.chapter + (G.loop > 1 ? '  (loop ' + G.loop + ', reshuffled)' : '');
+  $('chapter-tag').textContent = 'Chapter · ' + round.chapter + (G.loop > 1 ? '  (loop ' + G.loop + (G.scenario && G.scenario.ordered ? ', story replay)' : ', reshuffled)') : '');
   $('who-barista').textContent = '🎙️ ' + speakerLabel(round, G.scenario);
   $('barista-line').textContent = agentLine(round);
   $('barista-line').classList.remove('dim');
@@ -652,8 +652,8 @@ function completeLine() {
   G.roundIdx++;
   if (G.roundIdx >= G.rounds.length) {
     G.roundIdx = 0; G.loop++;
-    G.rounds = buildPlayOrder(practiceRounds(G.scenario.rounds)); // reshuffle chapters for the next pass
-    toast('📜 Script complete — chapters reshuffled for endurance (round ' + G.loop + ')');
+    G.rounds = buildPlayOrder(practiceRounds(G.scenario.rounds), G.scenario);
+    toast(G.scenario.ordered ? '📜 本集结束 — 按剧情顺序重播（第 ' + G.loop + ' 遍）' : '📜 Script complete — chapters reshuffled for endurance (round ' + G.loop + ')');
   }
   runRound();
 }
@@ -677,7 +677,7 @@ async function beginSession() {
   }
   const sc = getScenario(G.scenarioId);
   G.reverseRoles = $('reverse-roles').checked;
-  const rounds = buildPlayOrder(practiceRounds(sc.rounds));
+  const rounds = buildPlayOrder(practiceRounds(sc.rounds), sc);
   if (!rounds.length) {
     toast('⚠️ Scenario "' + G.scenarioId + '" failed to load. Pick another one.');
     return;

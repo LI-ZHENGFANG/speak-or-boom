@@ -1,7 +1,7 @@
 Speak or Boom — voiceover provenance
 
 Developer and copyright owner of the application: LI ZHENGFANG.
-Voice files were generated locally with Kokoro-82M v1.0, American English,
+The 1,328 clips in the five everyday scenarios were generated locally with Kokoro-82M v1.0, American English,
 using af_heart, af_bella and am_michael styles, native generation speed 0.95.
 These are synthetic voices, not human actor or original film recordings.
 
@@ -14,3 +14,14 @@ https://github.com/thewh1teagle/kokoro-onnx
 
 The model, generator and its dependencies are not included in or required by
 the browser application. Readers only play the bundled MP3 files.
+
+---
+"Ship It!" Ep.1 (movies scenario), added 2026-10-03:
+All 280 clips (140 rounds x agent/user) were synthesized with Meta AI
+production voices, American English, one voice per character:
+  MIA  (product manager, the player's role) -> avocado_v2:MAI_01 "Aria" (warm)
+  JAKE (developer)                          -> avocado_v2:ronan (casual)
+  LUCY (office manager)                     -> avocado_v2:myrtle (kindly)
+These are synthetic voices. All series dialogue is original writing;
+no film or television scripts were reproduced.
+The per-clip voice id is recorded in voice-manifest.js.

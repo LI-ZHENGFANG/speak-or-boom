@@ -6,3 +6,6 @@
 编辑脚本时还须同步 voice-script-manifest.json。
 生成后运行 python build_voice_pack.py --app-dir .. 校验并重建 voice-manifest.js。
 不要提交模型、依赖环境或账号密钥；每个新版本必须校验全部音频及台词映射。
+
+Ship It! Ep.1 使用 Muse 提供的 Meta AI 音频，生成工具需要其 Linux TTS 环境。
+不要用旧的 Kokoro 索引构建程序覆盖新剧集索引；更新时保留其他场景。
