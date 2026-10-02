@@ -15,8 +15,46 @@
   "regressions": "six JavaScript suites passed",
   "desktopTrial": "User confirmed Regular temperature is fine. completes after reading",
   "recordedPlayback": "Chrome audition and paused user-line demo reached ended; timer remained paused",
-  "publicDeployment": "pending GitHub credential authorization and push",
-  "mobileRecordedDialogue": "pending real-device verification",
-  "wechatArticle": "13-image local draft; not published",
-  "humanListening": "Not every clip has been manually audited"
+  "publicDeployment": {
+    "status": "published",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/",
+    "appCommit": "7b4a46b1a895ebefb597bcc93301e835dbc23a73",
+    "pagesRun": "37069077610",
+    "pagesConclusion": "success",
+    "packageBytes": 43427220,
+    "packageSha256": "dffc009bdbc633c747140988b1c53c78329728855ded77b67e146e934d33c676",
+    "manifestTextMatches": true,
+    "onlineConsole": "No captured errors or warnings on fresh Chrome homepage audition"
+  },
+  "mobileRecordedDialogue": {
+    "device": "Redmi Turbo 4 / Chrome",
+    "date": "2026-10-03",
+    "observed": "Public app reached round 4/88; microphone activity and partner-speaking state visible",
+    "userConfirmed": "New voice audible and dialogue advances continuously after reading",
+    "networkUserConfirmed": "Ordinary mainland-China connection without phone/router VPN or proxy",
+    "scope": "Continuous dialogue accepted; not a full 60-minute or every-scenario device audit"
+  },
+  "wechatArticle": {
+    "status": "ready, not published",
+    "images": 13,
+    "blocker": "Browser site-safety policy forbids automated access to mp.weixin.qq.com; human publication required",
+    "account": "方寸拾雅",
+    "title": "我做了一台“英语跑步机”，从一杯咖啡开始"
+  },
+  "humanListening": "Not every clip has been manually audited",
+  "archiveSite": {
+    "version": "v3.0-voice",
+    "revision": "b4657a64-1753-4969-8646-946d16cd1d01",
+    "sourceFiles": 24,
+    "sourceMatchesPackage": true,
+    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/voice-20261003-dffc009b.zip",
+    "firstReleaseEvidence": "Preserved unchanged"
+  },
+  "limits": [
+    "Fixed scripts",
+    "Estimated subtitle synchronization",
+    "VAD is not pronunciation scoring",
+    "Not every audio clip manually heard",
+    "Mainland access evidence limited to the reported device/network/time"
+  ]
 }

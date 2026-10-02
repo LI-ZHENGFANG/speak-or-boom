@@ -77,7 +77,7 @@ each pass lasts 25–35 minutes, and when the script ends the chapters are
    clicks, keyboard). A line completes after enough *speaking* milliseconds
    (scaled by line length) plus a short natural pause.
 2. **Speech recognition (bonus layer):** if `webkitSpeechRecognition` is available,
-   matching any core keyword (e.g. *medium*, *latte*) speeds up line completion. Android disables this second recorder to avoid audio focus conflicts.
+   a final transcript covering at least 80% of the sentence, with at least 800 ms of voiced activity, can complete the line. A single keyword is not enough. Android disables this second recorder to avoid audio focus conflicts.
    It never punishes — if recognition fails or is offline, VAD alone drives the game.
 
 The silence countdown runs **only** in `WAITING FOR USER` state — never while the
