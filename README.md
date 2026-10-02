@@ -1,55 +1,107 @@
 # Speak or Boom
 
-**在线练习：[点击开始 Speak or Boom](https://LI-ZHENGFANG.github.io/speak-or-boom/)**
+**No-Silence English Challenge** — six scenarios, 5 / 10 / 60 minutes.
 
-在线练习使用 HTTPS，不需要安装 Python。推荐电脑 Chrome、耳机和麦克风。微信内请复制网址到 Chrome 打开。
+A browser-based speaking trainer. Fixed English script + karaoke subtitles +
+voice activity detection + silence countdown + bomb fail mechanic.
+The goal is not perfect pronunciation — it's **forcing you to keep speaking English**.
 
-让英语练习有一段持续的时间：听一句，照着字幕接一句，再继续下一句。
+## Run it (Windows + Chrome recommended)
 
-开发者与版权所有者：**LI ZHENGFANG**  
-© 2026 LI ZHENGFANG. All rights reserved.
+```bash
+cd speak-or-boom
+py -3.8 -m http.server 8000
+```
 
-## 下载与使用
+Then open:
 
-打开[在线练习页](https://li-zhengfang.github.io/speak-or-boom/)，点击“下载完整作品”即可下载 ZIP。公开页面不要求 GitHub 登录；网络能否访问以实际测试为准。以下步骤用于电脑本地运行：
+```
+http://localhost:8000
+```
 
-1. 推荐 Windows + Chrome，并准备耳机和麦克风。
-2. 电脑安装 CPython 3.8，解压完整 ZIP，保留 `scenarios` 文件夹。
-3. 双击 `START.cmd`，保持终端窗口打开，浏览器会自动打开练习页。
-4. 也可在 Chrome 打开 `http://localhost:8000/`。
-5. 选场景、选时长，点击 START，允许麦克风；听完对方的话，照着字幕读出你的回应。
-6. PAUSE 暂停、RESUME 继续。关闭服务时，在终端按 Ctrl+C。
+> `localhost` counts as a secure context, so Chrome will allow microphone access.
+> Opening `index.html` via `file://` will break mic + TTS — don't do that.
 
-在线练习无需安装。以下本地运行方式只用于保存作品后离线部署。
+## How a session works
 
-## 练习内容
+1. Pick a duration: **5 min demo / 10 min / 60 min**. Stake: **¥1.00** (virtual).
+2. Press **START**, allow microphone access. 🎧 Headphones recommended.
+3. The **partner** speaks (bundled American English voiceover, default playback 0.75).
+4. **YOUR LINE** appears huge — read it out loud immediately.
+5. Keep talking. Silence triggers: **3s** ⚠️ KEEP TALKING → **5s** 🚨 SPEAK NOW (+alarm)
+   → **8s** 💣 countdown 3·2·1 → **12s** 💥 **BOOM**, session failed.
+6. Finish the timer → **YOU SURVIVED**, **¥0.90** returned (¥0.10 simulated platform fee).
 
-咖啡店、机场、酒店、求职面试、餐厅、经典电影，共六种固定对话场景。
+**Only silence can kill you.** Bad pronunciation, accent, missing words,
+extra words, slow pace — none of these cause failure.
 
-支持 5、10、60 分钟模式。长时间练习会重新排列章节并重复练习，不是一小时完全不重复的台词。
+## Controls
 
-轮到用户发言后，连续沉默 3 秒出现提醒、5 秒出现警报、8 秒进入最后倒计时、12 秒本轮结束。对方的浏览器语音播放期间不启动沉默倒计时。
+- **Pause / Resume** — stops timer, bomb, and mic detection. Pauses are counted.
+- **Your-line demonstration** — the pause screen plays the current user line while practice remains paused.
+- **Reverse roles** — select the checkbox before START to read the partner's original lines.
+- **End** — ends early (stake lost, counted as a failed session).
+- **Reset Demo Data** — restores ¥10.00 balance and zeroes stats (with confirmation).
 
-余额与押金均为虚拟练习数字，不涉及真实付款。记录保存在当前浏览器的本地存储中。
+## Project structure
 
-## 当前能力与限制
+```
+speak-or-boom/
+├── index.html        # screens: start (scenario picker) / game / mic-error / success / fail
+├── style.css         # dark Speed-movie countdown aesthetic
+├── app.js            # VAD, TTS, recognition, bomb, stake, storage, scenario engine
+├── coffee-script.js  # Coffee Shop scenario (88 rounds, 12 chapters)
+├── recorded-audio.js # MP3 playback, cancellation and load-error handling
+├── voice-manifest.js # 804 rounds / 1,608 audio files and text mapping
+├── audio/            # Both sides of every fixed script, American English
+├── scenarios/
+│   ├── _FORMAT.md    # contract every scenario file must follow
+│   ├── airport.js    # Airport — 144 rounds
+│   ├── hotel.js      # Hotel — 144 rounds
+│   ├── interview.js  # Job Interview — 144 rounds
+│   ├── restaurant.js # Restaurant — 144 rounds
+│   └── movies.js     # Classic Movies — 140 rounds of iconic quotes & role-play
+└── README.md
+```
 
-- 浏览器 TTS 播放对方台词；声音取决于系统安装的语音。
-- 麦克风检测持续发声，字幕高亮依据发声时长估算，不能作为精确逐词识别或专业发音评分。
-- 新增麦克风测试、实时音量、背景音和人声校准。手机轻声检测门槛降低，灵敏度可手动调整并保存。
-- Android 采用本地音量检测，避免同时启动第二套识音流程；电脑上的浏览器语音识别仍是可选辅助，其服务在部分网络可能不可用。
-- 当前使用固定剧本；自由对话和角色互换尚未提供。
-- 使用 HTTPS 或 localhost 才能取得麦克风权限；不建议直接双击 index.html。
+Each scenario is a self-contained JS file that registers itself on
+`window.SPEAK_OR_BOOM_SCENARIOS` (see `scenarios/_FORMAT.md` to add your own).
+Every scenario is built to sustain a full 60-minute session: with ~140+ rounds
+each pass lasts 25–35 minutes, and when the script ends the chapters are
+**reshuffled** and the run continues — no two loops play in the same order.
 
-## 项目结构
+## How detection works (MVP)
 
-`index.html` 为现有页面、样式及脚本合并的在线发布文件，内嵌完整作品 ZIP。原始多文件项目位于页面下载的完整作品 ZIP 中；解压后包含：`style.css` 样式；`app.js` 对话流程、计时、语音、存储；`coffee-script.js` 咖啡脚本；`scenarios/` 场景脚本；`start_local.py` Python 3.8 标准库本地服务器；`START.cmd` Windows 启动入口。
+1. **Voice Activity Detection (primary):** mic RMS volume vs. an adaptive noise
+   baseline. Sound must sustain ~80 ms to count as speech (rejects isolated
+   clicks, keyboard). A line completes after enough *speaking* milliseconds
+   (scaled by line length) plus a short natural pause.
+2. **Speech recognition (bonus layer):** if `webkitSpeechRecognition` is available,
+   matching any core keyword (e.g. *medium*, *latte*) speeds up line completion. Android disables this second recorder to avoid audio focus conflicts.
+   It never punishes — if recognition fails or is offline, VAD alone drives the game.
 
-保持 HTML、CSS、JavaScript 架构，没有后台、数据库、登录或支付系统。网站托管与作品发布账户相互独立。
+The silence countdown runs **only** in `WAITING FOR USER` state — never while the
+barista's TTS is playing, and never during line transitions.
 
-## 本次发布修订
+## Notes / limitations
 
-- 沉默提醒浮层允许鼠标操作穿透，避免遮挡暂停按钮。
-- 暂停或结束前保留累计时间，避免结束页错误显示 00:00。
+- 60-minute mode reshuffles and loops the selected scenario with an on-screen notice
+  ("looping for endurance") until the timer ends. This includes repeated material.
+- Switching to another app or tab automatically pauses the session.
+- Data (balance, sessions, wins, fails, speaking time, longest win) persists in
+  `localStorage` under key `speakOrBoom.v1`.
 
-本仓库的发布时间和提交记录会在实际发布后由 GitHub 记录；本文不将打包日期冒充最初公开发布时间。
+## Chinese setup guide
+
+See 使用说明.txt for the Windows + Chrome startup steps and troubleshooting.
+Subtitle timing and speech detection are approximate training aids, not professional pronunciation scoring.
+
+Developer and copyright owner: LI ZHENGFANG.
+
+## Voice controls
+
+All 804 rounds have both sides voiced: 1,608 bundled MP3 files. Default playback uses the same American English clips on phone and computer. These are locally generated voices, not human actor or original film recordings; see VOICE-NOTICE.txt for provenance. No voice model or generation dependencies run in the web application.
+
+Rate defaults to 0.75; home and pause screens allow 0.60–1.10. 1.00 is the original recording speed. The voice selector also offers device system voices as an explicit alternative. Preferences persist under `speakOrBoom.voice.v1`. Playback must end successfully before the user's silence timer begins. Errors pause the session.
+
+Keep the complete audio/ directory when extracting the ZIP. The separately exported inline HTML still needs sibling audio/ and downloads/ directories; it is not a single-file offline application. Subtitle highlighting estimates voiced progress, not exact word alignment. The scripts are fixed, not language-model conversation.

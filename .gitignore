@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+voice-tools/
+voice-model/
+voice-quality/
+.env
