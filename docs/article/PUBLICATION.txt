@@ -1,0 +1,26 @@
+方寸拾雅 · 首篇已发表
+标题：我做了一台“英语跑步机”，从一杯咖啡开始
+署名：LI ZHENGFANG
+显示发布时间：2026-10-03 06:32（北京时间）
+发布入口：红米微信原生“作品 → 写文章”。作品列表已显示文章与阅读数。
+正文 13 图：8 张摄影风格创作配图，5 张真实软件界面；咖啡馆封面。
+纽约段明确是想象场景，配图没有宣称作者亲自拍摄。
+练习网址：https://li-zhengfang.github.io/speak-or-boom/
+作品页面提供完整 ZIP 下载。微信中可复制该网址到 Chrome 练习。
+未提取永久文章链接；可在微信 → 我 → 作品 → 方寸拾雅的文章中查看或分享。
+本包是可维护的本地备份，平台排版与此 HTML 可能略有不同。
+
+图片顺序：
+1. article-photo-lake.png
+2. article-home.png
+3. article-photo-newyork.png
+4. article-photo-coffee.png
+5. article-photo-flight.png
+6. article-photo-hotel.png
+7. article-countdown.png
+8. article-photo-path.png
+9. article-photo-cinema.png
+10. article-mic-trial.png
+11. article-photo-desk.png
+12. article-guide.png
+13. article-voice-pause.png

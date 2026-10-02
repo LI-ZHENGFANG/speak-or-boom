@@ -35,11 +35,17 @@
     "scope": "Continuous dialogue accepted; not a full 60-minute or every-scenario device audit"
   },
   "wechatArticle": {
-    "status": "ready, not published",
+    "status": "published",
     "images": 13,
-    "blocker": "Browser site-safety policy forbids automated access to mp.weixin.qq.com; human publication required",
+    "photographicIllustrations": 8,
+    "realAppScreenshots": 5,
     "account": "方寸拾雅",
-    "title": "我做了一台“英语跑步机”，从一杯咖啡开始"
+    "title": "我做了一台“英语跑步机”，从一杯咖啡开始",
+    "publishedAtDisplayed": "2026-10-03 06:32 Asia/Shanghai",
+    "method": "User-authorized Redmi WeChat native Write Article entry",
+    "verification": "Publication progress finished; article appears in native Works list with coffee cover and read count 1",
+    "articleURL": null,
+    "productURL": "https://li-zhengfang.github.io/speak-or-boom/"
   },
   "humanListening": "Not every clip has been manually audited",
   "archiveSite": {
