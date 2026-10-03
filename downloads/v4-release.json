@@ -9,5 +9,8 @@
   "inputPatchBytes": 54207136,
   "packageNote": "Use the complete packageURL for archive registration; inputPatchURL requires an existing repository.",
   "sourceMatchesPackageNote": "Package release records are snapshots; current GitHub records can be updated after deployment.",
-  "publicationStatus": "awaiting push and public verification"
+  "publicationStatus": "published and verified",
+  "appCommit": "50f15adddf69f8087a90e04c71efa9b5d5244850",
+  "pagesRun": 37116165651,
+  "pagesConclusion": "success"
 }

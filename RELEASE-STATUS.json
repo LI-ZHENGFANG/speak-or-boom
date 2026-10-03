@@ -17,8 +17,17 @@
   "desktopTrial": "User confirmed Regular temperature is fine. completes after reading",
   "recordedPlayback": "Chrome audition and paused user-line demo reached ended; timer remained paused",
   "publicDeployment": {
-    "status": "locally verified; awaiting this release push and public-byte verification",
-    "url": "https://li-zhengfang.github.io/speak-or-boom/"
+    "status": "published and verified",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/",
+    "appCommit": "50f15adddf69f8087a90e04c71efa9b5d5244850",
+    "pagesRun": "37116165651",
+    "pagesConclusion": "success",
+    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-20261003-8b0a1465.zip",
+    "packageBytes": 62313541,
+    "packageSha256": "8b0a14656d25b3548ce60983889c0806b2cdc1dc25f600a81e561636e60edcb3",
+    "onlineBytes": "Ten public runtime/release files match Git blobs; original patch and complete ZIP both match SHA-256 and byte size",
+    "browserScope": "Online homepage and both coffee character auditions in Codex Chromium; no v4 mobile human acceptance",
+    "packageScope": "Immutable complete ZIP has release-time verification snapshots; current records are in GitHub main."
   },
   "mobileRecordedDialogue": {
     "device": "Redmi Turbo 4 / Chrome",
@@ -58,7 +67,10 @@
     "sourceMatchesPackage": true,
     "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/ep1-20261003-9f61cff7.zip",
     "firstReleaseEvidence": "Preserved unchanged",
-    "packageScope": "Immutable ZIP contains the release-time pending-verification record. Current verification and handoff are in GitHub main and the live archive."
+    "packageScope": "Immutable ZIP contains the release-time pending-verification record. Current verification and handoff are in GitHub main and the live archive.",
+    "pendingV4PackageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-20261003-8b0a1465.zip",
+    "pendingV4PackageSha256": "8b0a14656d25b3548ce60983889c0806b2cdc1dc25f600a81e561636e60edcb3",
+    "pendingV4PackageBytes": 62313541
   },
   "limits": [
     "Fixed scripts",
@@ -126,6 +138,8 @@
       "errors": []
     },
     "browserScope": "Local Codex Chromium decoding and recorded audition; v4 Redmi human acceptance not performed",
-    "packageNote": "Input ZIP is a patch without index.html, style.css or episode audio. Complete ZIP assembled from the merged repository."
+    "packageNote": "Input ZIP is a patch without index.html, style.css or episode audio. Complete ZIP assembled from the merged repository.",
+    "publicChecks": "Homepage and download URLs verified; all six start/replay/reverse sequences passed; random fallback removed",
+    "onlineAudition": "First coffee partner and reversed-role clips reached playback-ended; no captured warning/error logs"
   }
 }

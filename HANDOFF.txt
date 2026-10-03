@@ -87,3 +87,11 @@ movies 槽位改为原创 Ship It! 第一集，10 场、140 轮、280 条 Meta A
 已修正当前 README、使用说明、配音来源和工具台词索引；历史 Kokoro 工具不可覆盖当前音频。
 档案站由维护者接棒登记 v4.0：GET 当前 revision，原子提交 30 文本源码、手册和版本固定完整包。
 包内发布记录是打包时快照；本轮未作 v4 红米人工听审或完整时长验收，公众号未重新编辑。
+
+v4.0 公开发布核验完成：提交 50f15ad，Pages run 37116165651 成功。
+公开入口保持 https://li-zhengfang.github.io/speak-or-boom/ 。
+十个公开运行/登记文件与 Git 提交逐字节一致，原补丁及完整 ZIP 哈希与字节数匹配。
+完整包固定 URL：https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-20261003-8b0a1465.zip
+完整包 SHA-256：8b0a14656d25b3548ce60983889c0806b2cdc1dc25f600a81e561636e60edcb3
+完整包字节数：62313541
+档案站仍由接棒维护者登记，不能误标为本轮已同步；同名通用 ZIP 指向当前 v4 完整包。
