@@ -1,9 +1,9 @@
 {
   "version": "v4.0",
   "voicePack": {
-    "clips": 1608,
-    "rounds": 804,
-    "bytes": 66747248,
+    "clips": 1688,
+    "rounds": 884,
+    "bytes": 69089152,
     "checks": [
       "text match",
       "file size",
@@ -11,23 +11,15 @@
       "MP3 header",
       "waveform RMS and duration"
     ],
-    "engine": "Meta AI synthetic voices (all six scenes)"
+    "engine": "Meta AI synthetic voices (seven scenes)",
+    "roleMappings": 1768
   },
   "regressions": "eight Node suites passed",
   "desktopTrial": "User confirmed Regular temperature is fine. completes after reading",
   "recordedPlayback": "Chrome audition and paused user-line demo reached ended; timer remained paused",
   "publicDeployment": {
-    "status": "published and verified",
-    "url": "https://li-zhengfang.github.io/speak-or-boom/",
-    "appCommit": "2f60b136a22b93c7526532fa7d4438e23356acd8",
-    "pagesRun": "37142594963",
-    "pagesConclusion": "success",
-    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-voicefix-f04d1af6.zip",
-    "packageBytes": 62228555,
-    "packageSha256": "f04d1af626765467066cff766245196ec85867f974a9f50075814fc15ec235bc",
-    "onlineBytes": "13 public files match Git blobs including repaired MP3; fixed patch and complete ZIP match SHA-256 and byte count",
-    "browserScope": "Public Chromium diagnostic uses actual round functions and real audio; microphone stubbed and user completion simulated",
-    "packageScope": "Complete ZIP is an immutable release-time snapshot; current publication records are in GitHub main."
+    "status": "Shadowing locally verified; awaiting push and public verification",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/"
   },
   "mobileRecordedDialogue": {
     "device": "Redmi Turbo 4 / Chrome",
@@ -61,10 +53,10 @@
   "humanListening": "Not every clip has been manually audited",
   "archiveSite": {
     "version": "v4.0",
-    "status": "Maintainer updated handbook to v4.0; its package link still points to v3.1 and awaits this fixed complete ZIP",
+    "status": "Section 19 is pending; current archive still holds v3.1 package and source. Synchronization will follow successful public verification.",
     "revisionLookup": "GET /api/project returns the current revision; use it as expectedRevision",
     "sourceFiles": 30,
-    "sourceMatchesPackage": true,
+    "sourceMatchesPackage": false,
     "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/ep1-20261003-9f61cff7.zip",
     "firstReleaseEvidence": "Preserved unchanged",
     "packageScope": "Immutable ZIP contains the release-time pending-verification record. Current verification and handoff are in GitHub main and the live archive.",
@@ -180,5 +172,59 @@
       "playbackPass": true,
       "nextRoundPass": true
     }
+  },
+  "priorVoiceFixDeployment": {
+    "status": "published and verified",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/",
+    "appCommit": "2f60b136a22b93c7526532fa7d4438e23356acd8",
+    "pagesRun": "37142594963",
+    "pagesConclusion": "success",
+    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-voicefix-f04d1af6.zip",
+    "packageBytes": 62228555,
+    "packageSha256": "f04d1af626765467066cff766245196ec85867f974a9f50075814fc15ec235bc",
+    "onlineBytes": "13 public files match Git blobs including repaired MP3; fixed patch and complete ZIP match SHA-256 and byte count",
+    "browserScope": "Public Chromium diagnostic uses actual round functions and real audio; microphone stubbed and user completion simulated",
+    "packageScope": "Complete ZIP is an immutable release-time snapshot; current publication records are in GitHub main."
+  },
+  "shadowingUpdate": {
+    "version": "v4.0",
+    "scenario": "shadow_bond",
+    "title": "Codename: Nightfall",
+    "rounds": 80,
+    "chapters": 10,
+    "uniqueClips": 80,
+    "sharedRoleMappings": 160,
+    "voice": "avocado_v2:ronan",
+    "accent": "American English",
+    "order": "Authored order at start, all chapter boundaries, replay and role reversal",
+    "source": "Original fictional spy story supplied by Muse; not a film transcript or soundtrack",
+    "inputPatchSha256": "b57f581bf063c8c194ae0f5c9e72043f378c6b31b8288db597f8734f7f66d847",
+    "inputPatchBytes": 2318418,
+    "inputPatchURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/shadow-patch-b57f581b.zip",
+    "checks": "Eight Node suites pass; 1768 mappings, 1688 unique files, 884 rounds; Lucy repair intact",
+    "browserDecode": {
+      "status": "PASS",
+      "clips": 80,
+      "minRms": 0.03791106182237494,
+      "maxDurationDifference": 0,
+      "errors": []
+    },
+    "localEngineProbe": {
+      "scope": "Real audio and actual engine; microphone stubbed; simulated user completion",
+      "clip": "shadow_bond/8",
+      "microphoneRequests": 0,
+      "duration": 4.632,
+      "sha256": "9a9837651364db940cf781f714a5125d2eb40f1dcbc19fbd0ecc3fd0866a0fd9",
+      "shadowSameText": true,
+      "state": "waiting",
+      "round": 9,
+      "waitingAfterPlayback": true,
+      "playbackWallSeconds": 4.71,
+      "playbackPass": true,
+      "nextRoundPass": true,
+      "chapter": "Gearing Up"
+    },
+    "homeAudition": "Selected scenario audition reached playback-ended without warning or error logs",
+    "limits": "Microphone stubbed in round diagnostic; no new Redmi human acceptance or full 60-minute run; VAD does not score imitation or intonation"
   }
 }

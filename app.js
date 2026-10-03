@@ -365,9 +365,12 @@ async function testBaristaVoice() {
   if (button.disabled) return;
   button.disabled = true;
   const voice = pickVoice();
-  $('voice-test-status').textContent = voicePrefs.voiceId === 'recorded' ? '正在试听完整剧本配音…' : '正在试听英语声音' + (voice ? '：' + voice.name : '（系统默认引擎）') + '…';
+  const scene = getScenario(G.scenarioId);
+  const first = scene.rounds[0];
+  const round = $('reverse-roles').checked ? Object.assign({}, first, {agent:first.user, audioAgentRole:'user'}) : first;
+  $('voice-test-status').textContent = voicePrefs.voiceId === 'recorded' ? '正在试听 ' + scene.title + ' 的配音…' : '正在试听英语声音' + (voice ? '：' + voice.name : '（系统默认引擎）') + '…';
   try {
-    await speakBarista('Hello! Welcome in. What can I get for you today?');
+    await speakBarista(agentLine(round), round);
     $('voice-test-status').textContent = '播放已结束。听到英语后再开始练习。';
   } catch (e) {
     $('voice-test-status').textContent = '对方语音未播放：' + e.message + '。配音模式请检查网络；系统语音模式请检查英语引擎。';

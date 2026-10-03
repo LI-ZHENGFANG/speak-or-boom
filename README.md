@@ -1,6 +1,6 @@
 # Speak or Boom
 
-**No-Silence English Challenge** — six scenarios, 5 / 10 / 60 minutes.
+**No-Silence English Challenge** — seven scenarios, 5 / 10 / 60 minutes.
 
 A browser-based speaking trainer. Fixed English script + karaoke subtitles +
 voice activity detection + silence countdown + bomb fail mechanic.
@@ -52,7 +52,7 @@ speak-or-boom/
 ├── app.js            # VAD, TTS, recognition, bomb, stake, storage, scenario engine
 ├── coffee-script.js  # Coffee Shop scenario (88 rounds, 12 chapters)
 ├── recorded-audio.js # MP3 playback, cancellation and load-error handling
-├── voice-manifest.js # 804 rounds / 1,608 audio files and text mapping
+├── voice-manifest.js # 884 rounds / 1,768 role mappings / 1,688 unique MP3s
 ├── audio/            # Both sides of every fixed script, American English
 ├── scenarios/
 │   ├── _FORMAT.md    # contract every scenario file must follow
@@ -60,6 +60,7 @@ speak-or-boom/
 │   ├── hotel.js      # Hotel — 144 rounds
 │   ├── interview.js  # Job Interview — 144 rounds
 │   ├── restaurant.js # Restaurant — 144 rounds
+│   ├── shadow_bond.js # Codename: Nightfall — 80 shadowing rounds, 10 chapters
 │   └── movies.js     # Ship It! Ep.1: Demo Day Disaster — 140 rounds, original workplace sitcom
 └── README.md
 ```
@@ -69,7 +70,7 @@ Each scenario is a self-contained JS file that registers itself on
 The movies slot now contains **Ship It! Ep.1: Demo Day Disaster**, an original
 workplace sitcom with 10 scenes and 140 rounds. You play Mia and respond to Jake
 and Lucy. Scenes run in story order on every pass, including with reversed roles.
-All six scenarios now preserve their authored chapter order on every pass. The 60-minute option repeats material after a complete
+All seven scenarios now preserve their authored chapter order on every pass. The 60-minute option repeats material after a complete
 pass; it is not a one-hour film or a complete TV season.
 
 ## How detection works (MVP)
@@ -87,7 +88,7 @@ barista's TTS is playing, and never during line transitions.
 
 ## Notes / limitations
 
-- 60-minute mode loops the selected scenario with an on-screen notice; all six scenarios preserve authored story/chapter order
+- 60-minute mode loops the selected scenario with an on-screen notice; all seven scenarios preserve authored story/chapter order
   ("looping for endurance") until the timer ends. This includes repeated material.
 - Switching to another app or tab automatically pauses the session.
 - Data (balance, sessions, wins, fails, speaking time, longest win) persists in
@@ -102,7 +103,7 @@ Developer and copyright owner: LI ZHENGFANG.
 
 ## Voice controls
 
-All 804 rounds have both sides voiced: 1,608 bundled MP3 files. Default playback uses the same American English clips on phone and computer. All six scenes now use Meta AI synthetic voices supplied with the Muse updates, with a stable voice per character. The five everyday scenes were rewritten and their 1,328 recordings replaced in v4.0; the 280 Ship It! recordings are retained. These are not human actor or original film recordings; see VOICE-NOTICE.txt for provenance. No voice model or generation dependencies run in the web application.
+All 884 rounds have both sides voiced: 1,768 role mappings to 1,688 unique bundled MP3 files. The 80 shadowing rounds share the same recording between agent and user. Default playback uses the same American English clips on phone and computer. All seven scenes now use Meta AI synthetic voices supplied with the Muse updates, with a stable voice per character. The five everyday scenes were rewritten and their 1,328 recordings replaced in v4.0; the 280 Ship It! recordings are retained. These are not human actor or original film recordings; see VOICE-NOTICE.txt for provenance. No voice model or generation dependencies run in the web application.
 
 Rate defaults to 0.75; home and pause screens allow 0.60–1.10. 1.00 is the original recording speed. The voice selector also offers device system voices as an explicit alternative. Preferences persist under `speakOrBoom.voice.v1`. Playback must end successfully before the user's silence timer begins. Errors pause the session.
 
@@ -123,3 +124,18 @@ See HANDOFF.txt and RELEASE-STATUS.json for actual verification evidence.
 
 Five practical scenes now have longer continuous dialogue and named characters: Sam/Alex, Raj/Jordan, Nora/Daniel, Helen/David, and Marco/Julia. Counts remain 804 rounds / 1,608 clips including Ship It! Ep.1. Every scene is ordered, including replay and role reversal. The Muse ZIP is a patch, missing the application shell and episode audio; download the complete runnable ZIP from the project page for standalone use.
 Historical device acceptance does not establish v4.0 acceptance. See RELEASE-STATUS.json.
+
+## Shadowing expansion (v4.0, 2026-10-04)
+
+Codename: Nightfall adds 80 listen-and-repeat rounds in ten ordered chapters.
+Listen to Cross, then read the exact same sentence aloud when YOUR LINE appears.
+Both roles use the same recording, so role reversal keeps this scene unchanged.
+The 60-minute setting replays chapters in the same order after round 80; it is
+not an hour of new material. Speech detection tracks activity, not accent or
+intonation accuracy. Dialogue is an original fictional spy story, not a Bond
+film script or soundtrack. The supplied ronan voice is American English, not
+British English. The original public entrance remains unchanged.
+
+Deployment requires loading scenarios/shadow_bond.js in index.html before
+app.js; copying the patch alone does not add that script reference.
+The six previous scenes and the repaired Lucy line remain intact.

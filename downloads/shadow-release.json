@@ -1,0 +1,16 @@
+{
+  "version": "v4.0",
+  "edition": "Codename: Nightfall shadowing expansion",
+  "practiceURL": "https://li-zhengfang.github.io/speak-or-boom/",
+  "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-shadow-9dc5a31a.zip",
+  "packageSha256": "9dc5a31a2b604d1cd7134370570667aacfcb3d56c4a1e518c07e6910eb9f23f4",
+  "packageBytes": 64407155,
+  "inputPatchURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/shadow-patch-b57f581b.zip",
+  "inputPatchSha256": "b57f581bf063c8c194ae0f5c9e72043f378c6b31b8288db597f8734f7f66d847",
+  "inputPatchBytes": 2318418,
+  "rounds": 884,
+  "roleMappings": 1768,
+  "uniqueClips": 1688,
+  "publicationStatus": "awaiting push and public verification",
+  "packageNote": "Complete runnable archive; input patch alone is not standalone."
+}

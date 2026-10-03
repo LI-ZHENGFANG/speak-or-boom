@@ -1,13 +1,14 @@
 <!doctype html><html lang="en"><meta charset="utf-8"><title>All-scenes v4 audio verification</title>
 <h1>Speak or Boom v4 browser decoder check</h1>
-<p>Decodes all 1608 clips, checks non-silent samples and duration metadata. Does not use the microphone or change training records.</p>
+<p>Decodes all 1688 unique clips (1768 role mappings), checks non-silent samples and duration metadata. Does not use the microphone or change training records.</p>
 <button id="check">Verify all scene audio</button><pre id="result">Ready</pre>
-<script src="../voice-manifest.js?v=v4-35902050"></script><script>
+<script src="../voice-manifest.js?v=v4-shadow-b57f581b"></script><script>
 document.getElementById('check').onclick=async function(){
   this.disabled=true;
   const output=document.getElementById('result');
   const ctx=new (window.AudioContext||window.webkitAudioContext)();
-  const clips=Object.values(window.SPEAK_OR_BOOM_AUDIO.scenarios).flatMap(s=>Object.values(s).flatMap(r=>[r.agent,r.user]));
+  const mapped=Object.values(window.SPEAK_OR_BOOM_AUDIO.scenarios).flatMap(s=>Object.values(s).flatMap(r=>[r.agent,r.user]));
+  const clips=[...new Map(mapped.map(e=>[e.src,e])).values()];
   let next=0,done=0,minRms=Infinity,maxDurationDifference=0;const errors=[];
   async function worker(){
     while(next<clips.length){const e=clips[next++];

@@ -5,9 +5,9 @@
 <p>开发检查页：使用真实录音播放器和 app.js 的实际回合函数。这里不启动麦克风，也不改练习记录；“模拟读完”仅用于核对下一轮顺序。</p>
 <button id="play" disabled>播放第8轮修复配音</button><button id="continue" disabled>模拟读完，验证第9轮</button><button id="stop">停止</button>
 <p id="chapter-tag"></p><p id="who-barista"></p><p id="barista-line"></p><p id="state-line"></p><p id="user-line"></p><p id="tts-error"></p><pre id="result">正在加载检查…</pre>
-<script src="../scenarios/movies.js?v=v4-35902050"></script>
-<script src="../voice-manifest.js?v=v4-35902050"></script>
-<script src="../recorded-audio.js?v=v4-35902050"></script>
+<script src="../scenarios/movies.js?v=v4-shadow-b57f581b"></script>
+<script src="../voice-manifest.js?v=v4-shadow-b57f581b"></script>
+<script src="../recorded-audio.js?v=v4-shadow-b57f581b"></script>
 <script>
 (async()=>{
   const $=id=>document.getElementById(id),scenario=window.SPEAK_OR_BOOM_SCENARIOS.movies;
@@ -22,7 +22,7 @@
     startRec(){evidence.waitingAfterPlayback=true;$('continue').disabled=G.roundIdx!==7;result();},
     pauseSession(){G.state='paused';evidence.error='Playback failed';result();},
     buildPlayOrder:r=>r.slice(),practiceRounds:r=>r,toast(){}};
-  const response=await fetch('../app.js?v=v4-35902050');if(!response.ok)throw Error('app.js HTTP '+response.status);
+  const response=await fetch('../app.js?v=v4-shadow-b57f581b');if(!response.ok)throw Error('app.js HTTP '+response.status);
   const source=await response.text();
   const part=(a,b)=>source.slice(source.indexOf(a),source.indexOf(b));
   const engine=new Function('G','helpers',
