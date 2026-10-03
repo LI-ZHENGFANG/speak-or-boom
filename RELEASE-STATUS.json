@@ -18,8 +18,17 @@
   "desktopTrial": "User confirmed Regular temperature is fine. completes after reading",
   "recordedPlayback": "Chrome audition and paused user-line demo reached ended; timer remained paused",
   "publicDeployment": {
-    "status": "Shadowing locally verified; awaiting push and public verification",
-    "url": "https://li-zhengfang.github.io/speak-or-boom/"
+    "status": "published and verified",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/",
+    "appCommit": "d6ade053b24e0e1ed8b35a25f489b5f3abadf103",
+    "pagesRun": "37144171656",
+    "pagesConclusion": "success",
+    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-shadow-9dc5a31a.zip",
+    "packageBytes": 64407155,
+    "packageSha256": "9dc5a31a2b604d1cd7134370570667aacfcb3d56c4a1e518c07e6910eb9f23f4",
+    "onlineBytes": "11 public source/release files match Git blobs; all 80 new MP3 sizes and hashes pass; complete ZIP and original patch match SHA-256 and byte count",
+    "browserScope": "Public Chromium homepage, selected scenario audition and actual round functions with real MP3; diagnostic microphone stubbed and user completion simulated",
+    "packageScope": "Immutable release-time snapshot; current publication records are in GitHub main and live archive"
   },
   "mobileRecordedDialogue": {
     "device": "Redmi Turbo 4 / Chrome",
@@ -53,16 +62,19 @@
   "humanListening": "Not every clip has been manually audited",
   "archiveSite": {
     "version": "v4.0",
-    "status": "Section 19 is pending; current archive still holds v3.1 package and source. Synchronization will follow successful public verification.",
+    "status": "Published Nightfall section, complete package and 35 exact public source texts verified; final record refresh follows",
     "revisionLookup": "GET /api/project returns the current revision; use it as expectedRevision",
-    "sourceFiles": 30,
-    "sourceMatchesPackage": false,
-    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/ep1-20261003-9f61cff7.zip",
+    "sourceFiles": 35,
+    "sourceMatchesPackage": true,
+    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-shadow-9dc5a31a.zip",
     "firstReleaseEvidence": "Preserved unchanged",
     "packageScope": "Immutable ZIP contains the release-time pending-verification record. Current verification and handoff are in GitHub main and the live archive.",
-    "pendingV4PackageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-voicefix-f04d1af6.zip",
-    "pendingV4PackageSha256": "f04d1af626765467066cff766245196ec85867f974a9f50075814fc15ec235bc",
-    "pendingV4PackageBytes": 62228555
+    "pendingV4PackageURL": null,
+    "pendingV4PackageSha256": null,
+    "pendingV4PackageBytes": null,
+    "packageSha256": "9dc5a31a2b604d1cd7134370570667aacfcb3d56c4a1e518c07e6910eb9f23f4",
+    "packageBytes": 64407155,
+    "verificationRevision": "9bea8e71-213b-4800-85a2-4ce247ba7ecb"
   },
   "limits": [
     "Fixed scripts",
@@ -225,6 +237,21 @@
       "chapter": "Gearing Up"
     },
     "homeAudition": "Selected scenario audition reached playback-ended without warning or error logs",
-    "limits": "Microphone stubbed in round diagnostic; no new Redmi human acceptance or full 60-minute run; VAD does not score imitation or intonation"
+    "limits": "Microphone stubbed in round diagnostic; no new Redmi human acceptance or full 60-minute run; VAD does not score imitation or intonation",
+    "onlineEngineProbe": {
+      "scope": "Real audio and actual engine; microphone stubbed; simulated user completion",
+      "clip": "shadow_bond/8",
+      "microphoneRequests": 0,
+      "duration": 4.632,
+      "sha256": "9a9837651364db940cf781f714a5125d2eb40f1dcbc19fbd0ecc3fd0866a0fd9",
+      "shadowSameText": true,
+      "state": "barista",
+      "round": 9,
+      "waitingAfterPlayback": true,
+      "playbackWallSeconds": 4.8,
+      "playbackPass": true,
+      "nextRoundPass": true,
+      "chapter": "Gearing Up"
+    }
   }
 }

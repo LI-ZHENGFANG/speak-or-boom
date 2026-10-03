@@ -11,6 +11,10 @@
   "rounds": 884,
   "roleMappings": 1768,
   "uniqueClips": 1688,
-  "publicationStatus": "awaiting push and public verification",
-  "packageNote": "Complete runnable archive; input patch alone is not standalone."
+  "publicationStatus": "published and verified",
+  "packageNote": "Complete runnable archive; input patch alone is not standalone.",
+  "appCommit": "d6ade053b24e0e1ed8b35a25f489b5f3abadf103",
+  "pagesRun": 37144171656,
+  "pagesConclusion": "success",
+  "archiveStatus": "Published package, handbook and public sources verified"
 }

@@ -127,3 +127,12 @@ Codename: Nightfall / shadow_bond：80轮、10章、80个独立MP3；每轮两�
 60分钟会按序重复80轮，并非一小时全新剧情。所有对话顺序禁止随机。
 原作品入口：https://li-zhengfang.github.io/speak-or-boom/ 。
 本完整ZIP为不可变的发布时快照；最终公开部署/档案登记状态请读取GitHub main最新RELEASE-STATUS.json。
+
+Nightfall公开上线完成：应用提交d6ade05，Pages任务37144171656成功。
+11个公开文本/发布文件与Git提交一致；80个新增MP3的大小和SHA-256通过；原始补丁及完整ZIP公开下载校验通过。
+首页已显示新场景；试听按选择播放并正常结束；第8轮模拟跟读后按序进入第9轮及第二章。未作真人麦克风/红米验收。
+档案站第19节已改为已上线；完整下载包与35个文本源码登记校验通过，首发署名证据与可恢复历史保留。
+完整整合包：https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-shadow-9dc5a31a.zip
+SHA-256：9dc5a31a2b604d1cd7134370570667aacfcb3d56c4a1e518c07e6910eb9f23f4
+字节数：64407155
+历史v4/Lucy版本和原始补丁的固定URL保留；最新资料读取GitHub main与档案站/api/project。
