@@ -17,8 +17,17 @@
   "desktopTrial": "User confirmed Regular temperature is fine. completes after reading",
   "recordedPlayback": "Chrome audition and paused user-line demo reached ended; timer remained paused",
   "publicDeployment": {
-    "status": "Lucy repair locally verified; awaiting push and public verification",
-    "url": "https://li-zhengfang.github.io/speak-or-boom/"
+    "status": "published and verified",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/",
+    "appCommit": "2f60b136a22b93c7526532fa7d4438e23356acd8",
+    "pagesRun": "37142594963",
+    "pagesConclusion": "success",
+    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-voicefix-f04d1af6.zip",
+    "packageBytes": 62228555,
+    "packageSha256": "f04d1af626765467066cff766245196ec85867f974a9f50075814fc15ec235bc",
+    "onlineBytes": "13 public files match Git blobs including repaired MP3; fixed patch and complete ZIP match SHA-256 and byte count",
+    "browserScope": "Public Chromium diagnostic uses actual round functions and real audio; microphone stubbed and user completion simulated",
+    "packageScope": "Complete ZIP is an immutable release-time snapshot; current publication records are in GitHub main."
   },
   "mobileRecordedDialogue": {
     "device": "Redmi Turbo 4 / Chrome",
@@ -59,9 +68,9 @@
     "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/ep1-20261003-9f61cff7.zip",
     "firstReleaseEvidence": "Preserved unchanged",
     "packageScope": "Immutable ZIP contains the release-time pending-verification record. Current verification and handoff are in GitHub main and the live archive.",
-    "pendingV4PackageURL": null,
-    "pendingV4PackageSha256": "8b0a14656d25b3548ce60983889c0806b2cdc1dc25f600a81e561636e60edcb3",
-    "pendingV4PackageBytes": 62313541
+    "pendingV4PackageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-voicefix-f04d1af6.zip",
+    "pendingV4PackageSha256": "f04d1af626765467066cff766245196ec85867f974a9f50075814fc15ec235bc",
+    "pendingV4PackageBytes": 62228555
   },
   "limits": [
     "Fixed scripts",
@@ -157,6 +166,19 @@
       "nextRoundPass": true,
       "scope": "Actual runRound/completeLine functions and real MP3 player; microphone stubbed and user completion simulated"
     },
-    "limits": "No new Redmi human microphone acceptance or full episode human listening audit"
+    "limits": "No new Redmi human microphone acceptance or full episode human listening audit",
+    "onlineBrowserProbe": {
+      "scope": "Real audio and actual engine; microphone stubbed; simulated user completion",
+      "clip": "movies-008-agent",
+      "microphoneRequests": 0,
+      "duration": 6.24,
+      "sha256": "5a2b0fc136429ffdcf507f5ec6ee889ea7d23119cf193facf4bacc174988a99e",
+      "state": "barista",
+      "round": 9,
+      "waitingAfterPlayback": true,
+      "playbackWallSeconds": 6.78,
+      "playbackPass": true,
+      "nextRoundPass": true
+    }
   }
 }

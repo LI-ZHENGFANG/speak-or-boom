@@ -17,5 +17,8 @@
     "src": "audio/movies/movies-008-agent.mp3"
   },
   "packageNote": "Archive registration must use the complete packageURL; the supplied ZIP is a patch.",
-  "publicationStatus": "awaiting push and public verification"
+  "publicationStatus": "published and verified",
+  "appCommit": "2f60b136a22b93c7526532fa7d4438e23356acd8",
+  "pagesRun": 37142594963,
+  "pagesConclusion": "success"
 }
