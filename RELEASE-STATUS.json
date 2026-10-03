@@ -18,8 +18,17 @@
   "desktopTrial": "User confirmed Regular temperature is fine. completes after reading",
   "recordedPlayback": "Chrome audition and paused user-line demo reached ended; timer remained paused",
   "publicDeployment": {
-    "status": "Seven-story pack locally verified; awaiting push and public verification",
-    "url": "https://li-zhengfang.github.io/speak-or-boom/"
+    "status": "published and verified",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/",
+    "appCommit": "0fb35f5a395c9d1ec31907d8463d1f200d9f7b40",
+    "pagesRun": "37145716085",
+    "pagesConclusion": "success",
+    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-shadowpack-05a63aeb.zip",
+    "packageBytes": 79113585,
+    "packageSha256": "05a63aeb3bdb935b57049502cc62fdc5f803483bb46b80a49ee33f659a517a70",
+    "onlineBytes": "18 public source/release files match Git blobs; all 560 shadowing MP3 sizes and hashes pass; complete ZIP and original patch match SHA-256 and bytes",
+    "browserScope": "Public Chromium homepage, selected scenario audition and actual round functions with real MP3; microphone stubbed and completion simulated",
+    "packageScope": "Immutable release-time snapshot; current publication records are in GitHub main and live archive"
   },
   "mobileRecordedDialogue": {
     "device": "Redmi Turbo 4 / Chrome",
@@ -53,19 +62,19 @@
   "humanListening": "Not every clip has been manually audited",
   "archiveSite": {
     "version": "v4.0",
-    "status": "Previous Nightfall edition retained; seven-story package/source synchronization awaits public verification",
+    "status": "Seven-story section 20, complete package and corresponding public sources verified",
     "revisionLookup": "GET /api/project returns the current revision; use it as expectedRevision",
-    "sourceFiles": 35,
-    "sourceMatchesPackage": false,
-    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-shadow-9dc5a31a.zip",
+    "sourceFiles": 45,
+    "sourceMatchesPackage": true,
+    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-shadowpack-05a63aeb.zip",
     "firstReleaseEvidence": "Preserved unchanged",
     "packageScope": "Immutable ZIP contains the release-time pending-verification record. Current verification and handoff are in GitHub main and the live archive.",
     "pendingV4PackageURL": null,
     "pendingV4PackageSha256": null,
     "pendingV4PackageBytes": null,
-    "packageSha256": "9dc5a31a2b604d1cd7134370570667aacfcb3d56c4a1e518c07e6910eb9f23f4",
-    "packageBytes": 64407155,
-    "verificationRevision": "9bea8e71-213b-4800-85a2-4ce247ba7ecb"
+    "packageSha256": "05a63aeb3bdb935b57049502cc62fdc5f803483bb46b80a49ee33f659a517a70",
+    "packageBytes": 79113585,
+    "verificationRevision": "32cf6cd5-7014-4b6d-8542-8b000f4e21f2"
   },
   "limits": [
     "Fixed scripts",
@@ -526,6 +535,21 @@
       }
     ],
     "checks": "Eight Node suites pass; 2728 mappings, 2168 unique files, 1364 rounds; all thirteen authored start/replay/reverse orders; Lucy repair retained",
-    "limits": "Microphone stubbed and completion simulated; no new Redmi human acceptance or full 60-minute run. American English original stories, not movie soundtracks. VAD does not grade pronunciation."
+    "limits": "Microphone stubbed and completion simulated; no new Redmi human acceptance or full 60-minute run. American English original stories, not movie soundtracks. VAD does not grade pronunciation.",
+    "onlineEngineProbe": {
+      "scope": "Real audio and actual engine; microphone stubbed; simulated user completion",
+      "scenarioId": "shadow_chef",
+      "microphoneRequests": 0,
+      "duration": 7.008,
+      "sha256": "e632f39448a740db6323835efa3e60aa30239c1026a0d2c6d45a4b0c22e68e76",
+      "shadowSameText": true,
+      "state": "barista",
+      "round": 9,
+      "waitingAfterPlayback": true,
+      "playbackWallSeconds": 7.15,
+      "playbackPass": true,
+      "nextRoundPass": true,
+      "chapter": "The Ingredients"
+    }
   }
 }

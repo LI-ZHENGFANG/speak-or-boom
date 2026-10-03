@@ -147,3 +147,16 @@ Nightfall、Midnight Alibi、Starfall Protocol、The Verdict、Fire & Thyme、Fo
 诊断未请求麦克风，不代表本轮真人/红米验收；未逐条人工听审。60分钟按序循环，不是60分钟全新台词。
 原入口：https://li-zhengfang.github.io/speak-or-boom/ 。维护看main最新RELEASE-STATUS.json、HANDOFF.txt、downloads/shadow-pack-release.json。
 完整ZIP是不可变的发布时快照；最终上线状态以main及档案站为准。
+
+七故事合集公开上线完成：
+13个场景已在原入口显示，480条新配音连同Nightfall共560条跟读配音公开大小和SHA-256验证通过。
+八组Node回归、2168个独立音频、2728条映射与全部剧情顺序验证通过。
+560条跟读录音本地浏览器解码、七故事本地真实播放与模拟跨章推进通过；线上主厨试听及真实引擎模拟跨章通过。
+档案站第20节已发布、下载入口换成七故事完整包，对应源码公开逐一校验通过；首发证据与历史版本保留。
+本轮没有新的红米真人麦克风验收或全小时测试；未逐条人工听审；发声检测不是发音评分。
+应用提交：0fb35f5a395c9d1ec31907d8463d1f200d9f7b40
+Pages任务：37145716085
+完整作品：https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-shadowpack-05a63aeb.zip
+SHA-256：05a63aeb3bdb935b57049502cc62fdc5f803483bb46b80a49ee33f659a517a70
+字节数：79113585
+本次档案源码条数：45；当前revision从/api/project读取。
