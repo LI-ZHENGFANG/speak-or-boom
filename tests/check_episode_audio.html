@@ -2,7 +2,7 @@
 <h1>Ship It! Ep.1 browser decoder check</h1>
 <p>Decodes all 280 clips, checks non-silent samples and duration metadata. Does not use the microphone or change training records.</p>
 <button id="check">Verify episode audio</button><pre id="result">Ready</pre>
-<script src="../voice-manifest.js"></script><script>
+<script src="../voice-manifest.js?v=v4-35902050"></script><script>
 document.getElementById('check').onclick=async function(){
   this.disabled=true;
   const output=document.getElementById('result');
@@ -12,7 +12,7 @@ document.getElementById('check').onclick=async function(){
   async function worker(){
     while(next<clips.length){const e=clips[next++];
       try{
-        const response=await fetch('../'+e.src);if(!response.ok)throw Error('HTTP '+response.status);
+        const response=await fetch('../'+e.src+'?v='+e.sha256);if(!response.ok)throw Error('HTTP '+response.status);
         const buffer=await ctx.decodeAudioData(await response.arrayBuffer());
         const pcm=buffer.getChannelData(0);let sum=0;for(const x of pcm)sum+=x*x;
         const rms=Math.sqrt(sum/pcm.length),difference=Math.abs(buffer.duration-e.seconds);

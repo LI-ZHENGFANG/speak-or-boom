@@ -1,16 +1,21 @@
 {
   "version": "v4.0",
   "practiceURL": "https://li-zhengfang.github.io/speak-or-boom/",
-  "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-20261003-8b0a1465.zip",
-  "packageSha256": "8b0a14656d25b3548ce60983889c0806b2cdc1dc25f600a81e561636e60edcb3",
-  "packageBytes": 62313541,
-  "inputPatchURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/speak-or-boom-v4-all-scenes.zip",
-  "inputPatchSha256": "359f51af6de9c8e33bbafa730699592a6a7e3b599b2accc7563fdc70bc16bb2a",
-  "inputPatchBytes": 54207136,
-  "packageNote": "Use the complete packageURL for archive registration; inputPatchURL requires an existing repository.",
-  "sourceMatchesPackageNote": "Package release records are snapshots; current GitHub records can be updated after deployment.",
-  "publicationStatus": "published and verified",
-  "appCommit": "50f15adddf69f8087a90e04c71efa9b5d5244850",
-  "pagesRun": 37116165651,
-  "pagesConclusion": "success"
+  "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-voicefix-f04d1af6.zip",
+  "packageSha256": "f04d1af626765467066cff766245196ec85867f974a9f50075814fc15ec235bc",
+  "packageBytes": 62228555,
+  "inputPatchURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-fixed-patch-35902050.zip",
+  "inputPatchAliasURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/speak-or-boom-v4-all-scenes.zip",
+  "inputPatchSha256": "3590205067db5d9582469f62f266e9a65e9ca27a69b5ff0c63225eb4126ba43d",
+  "inputPatchBytes": 54253298,
+  "fixedClip": {
+    "seconds": 6.24,
+    "voice": "avocado_v2:myrtle",
+    "text": "Relax. I will fix it after the demo. Priorities, people.",
+    "bytes": 49957,
+    "sha256": "5a2b0fc136429ffdcf507f5ec6ee889ea7d23119cf193facf4bacc174988a99e",
+    "src": "audio/movies/movies-008-agent.mp3"
+  },
+  "packageNote": "Archive registration must use the complete packageURL; the supplied ZIP is a patch.",
+  "publicationStatus": "awaiting push and public verification"
 }

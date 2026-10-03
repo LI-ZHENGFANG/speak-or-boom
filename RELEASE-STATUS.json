@@ -3,7 +3,7 @@
   "voicePack": {
     "clips": 1608,
     "rounds": 804,
-    "bytes": 67030832,
+    "bytes": 66747248,
     "checks": [
       "text match",
       "file size",
@@ -17,17 +17,8 @@
   "desktopTrial": "User confirmed Regular temperature is fine. completes after reading",
   "recordedPlayback": "Chrome audition and paused user-line demo reached ended; timer remained paused",
   "publicDeployment": {
-    "status": "published and verified",
-    "url": "https://li-zhengfang.github.io/speak-or-boom/",
-    "appCommit": "50f15adddf69f8087a90e04c71efa9b5d5244850",
-    "pagesRun": "37116165651",
-    "pagesConclusion": "success",
-    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-20261003-8b0a1465.zip",
-    "packageBytes": 62313541,
-    "packageSha256": "8b0a14656d25b3548ce60983889c0806b2cdc1dc25f600a81e561636e60edcb3",
-    "onlineBytes": "Ten public runtime/release files match Git blobs; original patch and complete ZIP both match SHA-256 and byte size",
-    "browserScope": "Online homepage and both coffee character auditions in Codex Chromium; no v4 mobile human acceptance",
-    "packageScope": "Immutable complete ZIP has release-time verification snapshots; current records are in GitHub main."
+    "status": "Lucy repair locally verified; awaiting push and public verification",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/"
   },
   "mobileRecordedDialogue": {
     "device": "Redmi Turbo 4 / Chrome",
@@ -60,15 +51,15 @@
   },
   "humanListening": "Not every clip has been manually audited",
   "archiveSite": {
-    "version": "v3.1-ep1",
-    "status": "Awaiting maintainer registration of v4.0 fixed package URL, SHA-256 and byte count",
+    "version": "v4.0",
+    "status": "Maintainer updated handbook to v4.0; its package link still points to v3.1 and awaits this fixed complete ZIP",
     "revisionLookup": "GET /api/project returns the current revision; use it as expectedRevision",
     "sourceFiles": 30,
     "sourceMatchesPackage": true,
     "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/ep1-20261003-9f61cff7.zip",
     "firstReleaseEvidence": "Preserved unchanged",
     "packageScope": "Immutable ZIP contains the release-time pending-verification record. Current verification and handoff are in GitHub main and the live archive.",
-    "pendingV4PackageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-20261003-8b0a1465.zip",
+    "pendingV4PackageURL": null,
     "pendingV4PackageSha256": "8b0a14656d25b3548ce60983889c0806b2cdc1dc25f600a81e561636e60edcb3",
     "pendingV4PackageBytes": 62313541
   },
@@ -98,27 +89,26 @@
     "browserAudition": "Online first partner and swapped-role recordings both reached ended in Chromium",
     "mobileScope": "Earlier Redmi acceptance was for v3.0; this episode has not yet been accepted on the device",
     "limits": "Original episode, not a licensed TV transcript or whole season; no full episode human listening audit",
-    "nativeClipSeconds": 1101.84
+    "nativeClipSeconds": 1066.392
   },
   "previousPublicDeployment": {
-    "status": "published",
+    "status": "published and verified",
     "url": "https://li-zhengfang.github.io/speak-or-boom/",
-    "appCommit": "72c7289965504395484dffb5b8456b22be53086a",
-    "pagesRun": "37077632626",
+    "appCommit": "50f15adddf69f8087a90e04c71efa9b5d5244850",
+    "pagesRun": "37116165651",
     "pagesConclusion": "success",
-    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/ep1-20261003-9f61cff7.zip",
-    "packageBytes": 42322713,
-    "packageSha256": "9f61cff7df5a7f845c0b2df2ac0dfa4cf1721b4c1c667f132e04c2669bcc57e1",
-    "manifestTextMatches": true,
-    "onlineConsole": "No captured errors or warnings in fresh Chromium homepage, first partner and swapped-role auditions",
-    "onlineBytes": "app.js, movies.js and voice-manifest.js match committed files; public ZIP SHA-256 and byte size match",
-    "browserScope": "Available Codex in-app Chromium; Chrome extension unavailable for this episode audit"
+    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-20261003-8b0a1465.zip",
+    "packageBytes": 62313541,
+    "packageSha256": "8b0a14656d25b3548ce60983889c0806b2cdc1dc25f600a81e561636e60edcb3",
+    "onlineBytes": "Ten public runtime/release files match Git blobs; original patch and complete ZIP both match SHA-256 and byte size",
+    "browserScope": "Online homepage and both coffee character auditions in Codex Chromium; no v4 mobile human acceptance",
+    "packageScope": "Immutable complete ZIP has release-time verification snapshots; current records are in GitHub main."
   },
   "allScenesUpdate": {
     "version": "v4.0",
-    "inputPatchSha256": "359f51af6de9c8e33bbafa730699592a6a7e3b599b2accc7563fdc70bc16bb2a",
-    "inputPatchBytes": 54207136,
-    "inputPatchURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/speak-or-boom-v4-all-scenes.zip",
+    "inputPatchSha256": "3590205067db5d9582469f62f266e9a65e9ca27a69b5ff0c63225eb4126ba43d",
+    "inputPatchBytes": 54253298,
+    "inputPatchURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-fixed-patch-35902050.zip",
     "rewrittenScenes": [
       "coffee",
       "airport",
@@ -141,5 +131,32 @@
     "packageNote": "Input ZIP is a patch without index.html, style.css or episode audio. Complete ZIP assembled from the merged repository.",
     "publicChecks": "Homepage and download URLs verified; all six start/replay/reverse sequences passed; random fallback removed",
     "onlineAudition": "First coffee partner and reversed-role clips reached playback-ended; no captured warning/error logs"
+  },
+  "v4VoiceFix": {
+    "clip": "movies-008-agent",
+    "text": "Relax. I will fix it after the demo. Priorities, people.",
+    "previousSeconds": 41.688,
+    "seconds": 6.24,
+    "bytes": 49957,
+    "sha256": "5a2b0fc136429ffdcf507f5ec6ee889ea7d23119cf193facf4bacc174988a99e",
+    "inputPatchSha256": "3590205067db5d9582469f62f266e9a65e9ca27a69b5ff0c63225eb4126ba43d",
+    "inputPatchBytes": 54253298,
+    "scope": "Exactly one supplied audio/manifest entry replaced; all other supplied scripts and voice entries equal current release",
+    "cacheFix": "MP3 requests include content SHA-256; index script URLs include release ID v4-35902050",
+    "regressions": "Eight Node suites passed; all 1608 text/hash/size checks and six start/replay/reverse orders passed; abnormal clip duration check added",
+    "episodeDecode": {
+      "status": "PASS",
+      "clips": 280,
+      "minRms": 0.009791455931716242,
+      "maxDurationDifference": 0,
+      "errors": []
+    },
+    "browserEngineProbe": {
+      "playbackPass": true,
+      "playbackWallSeconds": 6.3,
+      "nextRoundPass": true,
+      "scope": "Actual runRound/completeLine functions and real MP3 player; microphone stubbed and user completion simulated"
+    },
+    "limits": "No new Redmi human microphone acceptance or full episode human listening audit"
   }
 }

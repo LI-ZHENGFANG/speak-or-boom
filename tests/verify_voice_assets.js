@@ -12,6 +12,8 @@ for(const [id,scene] of Object.entries(c.window.SPEAK_OR_BOOM_SCENARIOS)){
       assert.equal(data.length,e.bytes);assert.equal(crypto.createHash('sha256').update(data).digest('hex'),e.sha256);
       assert.ok(data.slice(0,3).toString()==='ID3'||(data[0]===255&&(data[1]&224)===224),'MP3 header');
       assert.ok(e.seconds>0.25 && Number.isFinite(e.seconds));
+      const words=(e.text.match(/\S+/g)||[]).length;
+      assert.ok(e.seconds<Math.max(12,words*1.5+3),`${id}/${r.id}/${role}: unusually long clip for its sentence; check TTS corruption`);
       if(id==='movies'){assert.equal(e.voice,role==='user'?'avocado_v2:MAI_01':r.speaker==='JAKE'?'avocado_v2:ronan':'avocado_v2:myrtle');episodeSeconds+=e.seconds;}
       clips++;bytes+=data.length;
     }

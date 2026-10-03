@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lucy 第8轮配音验证</title>
+<style>body{font:18px/1.6 system-ui;max-width:760px;margin:40px auto;padding:24px;color:#17212b;background:#faf8f3}button{padding:12px 20px;margin:8px 8px 8px 0;font:inherit}pre{white-space:pre-wrap;border:1px solid #ddd;padding:18px}p{margin:14px 0}.dim{color:#69747c}</style>
+<h1>Lucy 第8轮配音验证</h1>
+<p>开发检查页：使用真实录音播放器和 app.js 的实际回合函数。这里不启动麦克风，也不改练习记录；“模拟读完”仅用于核对下一轮顺序。</p>
+<button id="play" disabled>播放第8轮修复配音</button><button id="continue" disabled>模拟读完，验证第9轮</button><button id="stop">停止</button>
+<p id="chapter-tag"></p><p id="who-barista"></p><p id="barista-line"></p><p id="state-line"></p><p id="user-line"></p><p id="tts-error"></p><pre id="result">正在加载检查…</pre>
+<script src="../scenarios/movies.js?v=v4-35902050"></script>
+<script src="../voice-manifest.js?v=v4-35902050"></script>
+<script src="../recorded-audio.js?v=v4-35902050"></script>
+<script>
+(async()=>{
+  const $=id=>document.getElementById(id),scenario=window.SPEAK_OR_BOOM_SCENARIOS.movies;
+  const G={state:'barista',scenarioId:'movies',scenario,rounds:scenario.rounds,roundIdx:7,loop:1,voiceTurn:0,
+    lineSpeakMs:0,silenceMs:0,stats:{linesDone:0,speakMs:0,longestSilence:0}};
+  const evidence={scope:'Real audio and actual engine; microphone stubbed; simulated user completion',clip:'movies-008-agent',microphoneRequests:0};
+  function result(){evidence.state=G.state;evidence.round=G.roundIdx+1;$('result').textContent=JSON.stringify(evidence,null,2);}
+  const helpers={$,currentRound:()=>G.rounds[G.roundIdx],agentLine:r=>r.agent,speakerLabel:r=>r.speaker,
+    stopRec(){},updateHudLine(){},speakBarista(text,r){const e=SOBRecorded.entry('movies',r.id,'agent');return SOBRecorded.play({...e,src:'../'+e.src},1);},
+    AudioSys:{ctx:{async resume(){}}},resetLineCounters(){G.lineSpeakMs=0;G.silenceMs=0;},
+    renderUserLine(r){$('user-line').textContent='YOUR LINE: '+r.user;$('state-line').textContent='等待用户回应（检查页未启用麦克风）';},bombHide(){},
+    startRec(){evidence.waitingAfterPlayback=true;$('continue').disabled=G.roundIdx!==7;result();},
+    pauseSession(){G.state='paused';evidence.error='Playback failed';result();},
+    buildPlayOrder:r=>r.slice(),practiceRounds:r=>r,toast(){}};
+  const response=await fetch('../app.js?v=v4-35902050');if(!response.ok)throw Error('app.js HTTP '+response.status);
+  const source=await response.text();
+  const part=(a,b)=>source.slice(source.indexOf(a),source.indexOf(b));
+  const engine=new Function('G','helpers',
+    'const {$,currentRound,agentLine,speakerLabel,stopRec,updateHudLine,speakBarista,AudioSys,resetLineCounters,renderUserLine,bombHide,startRec,pauseSession,buildPlayOrder,practiceRounds,toast}=helpers;'+
+    part('async function runRound()', 'function tryCompleteLine()')+
+    part('function completeLine()', '/* ================= session control')+';return {runRound,completeLine};')(G,helpers);
+  const clip=SOBRecorded.entry('movies','movies-008','agent');
+  evidence.duration=clip.seconds;evidence.sha256=clip.sha256;
+  if(clip.seconds<6||clip.seconds>6.5)throw Error('Expected repaired clip around 6.24 seconds');
+  $('play').disabled=false;result();
+  $('play').onclick=async()=>{
+    $('play').disabled=true;G.roundIdx=7;G.state='barista';const started=performance.now();
+    await engine.runRound();evidence.playbackWallSeconds=Number(((performance.now()-started)/1000).toFixed(2));
+    evidence.playbackPass=G.state==='waiting'&&G.roundIdx===7;result();
+  };
+  $('continue').onclick=()=>{
+    $('continue').disabled=true;G.lineSpeakMs=1600;G.silenceMs=600;engine.completeLine();
+    evidence.nextRoundPass=G.roundIdx===8&&G.rounds[8].id==='movies-009';result();
+  };
+  $('stop').onclick=()=>{G.state='over';SOBRecorded.stop();result();};
+})().catch(error=>{document.getElementById('result').textContent='FAIL: '+error.message;});
+</script></html>

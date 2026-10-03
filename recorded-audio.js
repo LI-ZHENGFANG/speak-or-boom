@@ -29,7 +29,8 @@
         if (error) reject(error); else resolve();
       };
       active = { finish };
-      media.src = clip.src;
+      // A changed recording must not reuse a cached broken file.
+      media.src = clip.src + (clip.sha256 ? (clip.src.includes('?') ? '&' : '?') + 'v=' + encodeURIComponent(clip.sha256) : '');
       media.playbackRate = rate;
       media.preservesPitch = true;
       media.onended = () => finish();
