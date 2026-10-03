@@ -1,0 +1,18 @@
+{
+  "version": "v4.0",
+  "edition": "Seven original shadowing stories",
+  "practiceURL": "https://li-zhengfang.github.io/speak-or-boom/",
+  "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-shadowpack-05a63aeb.zip",
+  "packageSha256": "05a63aeb3bdb935b57049502cc62fdc5f803483bb46b80a49ee33f659a517a70",
+  "packageBytes": 79113585,
+  "inputPatchURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/shadow-pack-patch-ba5df1ec.zip",
+  "inputPatchSha256": "ba5df1ec2651691d364fba44c32380afe0fb6be4f6a344b8237f62974f6652de",
+  "inputPatchBytes": 17016750,
+  "scenarios": 13,
+  "shadowScenarios": 7,
+  "rounds": 1364,
+  "roleMappings": 2728,
+  "uniqueClips": 2168,
+  "publicationStatus": "awaiting push and public verification",
+  "packageNote": "Complete runnable release snapshot; original 17MB input patch alone is not standalone."
+}

@@ -1,7 +1,7 @@
 Speak or Boom — voiceover provenance
 
 Developer and copyright owner of the application: LI ZHENGFANG.
-Current v4.0 with shadowing: all 1,688 unique clips use Meta AI synthetic character voices,
+Current v4.0 with shadowing: all 2,168 unique clips use Meta AI synthetic character voices,
 as described in the scenario sections below.
 
 Historical v3.0 recordings (replaced in v4.0) were generated locally
@@ -64,3 +64,16 @@ Codename: Nightfall (shadow_bond), added 2026-10-04:
 Agent and user have identical text and share the same MP3 for each round.
 This is not a licensed Bond film, a film soundtrack or a British accent.
 No new voice-generation dependencies are needed by the web application.
+
+---
+Seven-scene shadow pack, added 2026-10-04:
+560 unique recordings for 560 listen-and-repeat rounds. The earlier 80
+Nightfall clips are retained; six stories add 480 new clips. Each round uses
+one shared MP3 for agent and user. All voices are synthetic American English.
+Codename: Nightfall / CROSS -> avocado_v2:ronan
+Midnight Alibi / MARLOWE -> avocado_v2:MAI_03
+Starfall Protocol / REYES -> avocado_v2:MAI_01
+The Verdict / COLE -> avocado_v2:ronan
+Fire & Thyme / ROSA -> avocado_v2:myrtle
+Fourth Quarter / WEBB -> avocado_v2:ronan
+Open Mic / JENNY -> avocado_v2:MAI_02

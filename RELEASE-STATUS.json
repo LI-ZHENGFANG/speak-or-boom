@@ -1,9 +1,9 @@
 {
   "version": "v4.0",
   "voicePack": {
-    "clips": 1688,
-    "rounds": 884,
-    "bytes": 69089152,
+    "clips": 2168,
+    "rounds": 1364,
+    "bytes": 84887200,
     "checks": [
       "text match",
       "file size",
@@ -11,24 +11,15 @@
       "MP3 header",
       "waveform RMS and duration"
     ],
-    "engine": "Meta AI synthetic voices (seven scenes)",
-    "roleMappings": 1768
+    "engine": "Meta AI synthetic voices (thirteen scenarios)",
+    "roleMappings": 2728
   },
   "regressions": "eight Node suites passed",
   "desktopTrial": "User confirmed Regular temperature is fine. completes after reading",
   "recordedPlayback": "Chrome audition and paused user-line demo reached ended; timer remained paused",
   "publicDeployment": {
-    "status": "published and verified",
-    "url": "https://li-zhengfang.github.io/speak-or-boom/",
-    "appCommit": "d6ade053b24e0e1ed8b35a25f489b5f3abadf103",
-    "pagesRun": "37144171656",
-    "pagesConclusion": "success",
-    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-shadow-9dc5a31a.zip",
-    "packageBytes": 64407155,
-    "packageSha256": "9dc5a31a2b604d1cd7134370570667aacfcb3d56c4a1e518c07e6910eb9f23f4",
-    "onlineBytes": "11 public source/release files match Git blobs; all 80 new MP3 sizes and hashes pass; complete ZIP and original patch match SHA-256 and byte count",
-    "browserScope": "Public Chromium homepage, selected scenario audition and actual round functions with real MP3; diagnostic microphone stubbed and user completion simulated",
-    "packageScope": "Immutable release-time snapshot; current publication records are in GitHub main and live archive"
+    "status": "Seven-story pack locally verified; awaiting push and public verification",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/"
   },
   "mobileRecordedDialogue": {
     "device": "Redmi Turbo 4 / Chrome",
@@ -62,10 +53,10 @@
   "humanListening": "Not every clip has been manually audited",
   "archiveSite": {
     "version": "v4.0",
-    "status": "Published Nightfall section, complete package and 35 exact public source texts verified; final record refresh follows",
+    "status": "Previous Nightfall edition retained; seven-story package/source synchronization awaits public verification",
     "revisionLookup": "GET /api/project returns the current revision; use it as expectedRevision",
     "sourceFiles": 35,
-    "sourceMatchesPackage": true,
+    "sourceMatchesPackage": false,
     "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-shadow-9dc5a31a.zip",
     "firstReleaseEvidence": "Preserved unchanged",
     "packageScope": "Immutable ZIP contains the release-time pending-verification record. Current verification and handoff are in GitHub main and the live archive.",
@@ -253,5 +244,288 @@
       "nextRoundPass": true,
       "chapter": "Gearing Up"
     }
+  },
+  "priorNightfallDeployment": {
+    "status": "published and verified",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/",
+    "appCommit": "d6ade053b24e0e1ed8b35a25f489b5f3abadf103",
+    "pagesRun": "37144171656",
+    "pagesConclusion": "success",
+    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-shadow-9dc5a31a.zip",
+    "packageBytes": 64407155,
+    "packageSha256": "9dc5a31a2b604d1cd7134370570667aacfcb3d56c4a1e518c07e6910eb9f23f4",
+    "onlineBytes": "11 public source/release files match Git blobs; all 80 new MP3 sizes and hashes pass; complete ZIP and original patch match SHA-256 and byte count",
+    "browserScope": "Public Chromium homepage, selected scenario audition and actual round functions with real MP3; diagnostic microphone stubbed and user completion simulated",
+    "packageScope": "Immutable release-time snapshot; current publication records are in GitHub main and live archive"
+  },
+  "shadowPackUpdate": {
+    "version": "v4.0",
+    "scenarios": [
+      {
+        "id": "shadow_bond",
+        "title": "Codename: Nightfall",
+        "speaker": "CROSS",
+        "difficulty": "Intermediate",
+        "voice": "avocado_v2:ronan",
+        "rounds": 80,
+        "chapters": [
+          "Midnight Briefing",
+          "Gearing Up",
+          "Arrival in Monaco",
+          "The Casino",
+          "Rooftop Chase",
+          "The Villa",
+          "The Trap",
+          "The Escape",
+          "Showdown",
+          "Debrief"
+        ]
+      },
+      {
+        "id": "shadow_chef",
+        "title": "Fire & Thyme",
+        "speaker": "ROSA",
+        "difficulty": "Beginner",
+        "voice": "avocado_v2:myrtle",
+        "rounds": 80,
+        "chapters": [
+          "Welcome to My Kitchen",
+          "The Ingredients",
+          "First Cut",
+          "Fire",
+          "The Sizzle",
+          "Patience",
+          "The Plate",
+          "The First Bite",
+          "The Secret",
+          "Mangia!"
+        ]
+      },
+      {
+        "id": "shadow_coach",
+        "title": "Fourth Quarter",
+        "speaker": "WEBB",
+        "difficulty": "Beginner",
+        "voice": "avocado_v2:ronan",
+        "rounds": 80,
+        "chapters": [
+          "The Locker Room",
+          "The Score",
+          "No Excuses",
+          "Remember Why",
+          "One Play",
+          "Trust",
+          "The Stand",
+          "The Roar",
+          "Back Out",
+          "The Whistle"
+        ]
+      },
+      {
+        "id": "shadow_comic",
+        "title": "Open Mic",
+        "speaker": "JENNY",
+        "difficulty": "Advanced",
+        "voice": "avocado_v2:MAI_02",
+        "rounds": 80,
+        "chapters": [
+          "The Stage",
+          "The Opener",
+          "Dating Life",
+          "My Parents",
+          "The Day Job",
+          "The Bomb",
+          "The Recovery",
+          "The Closer",
+          "The Laugh",
+          "Encore"
+        ]
+      },
+      {
+        "id": "shadow_court",
+        "title": "The Verdict",
+        "speaker": "COLE",
+        "difficulty": "Advanced",
+        "voice": "avocado_v2:ronan",
+        "rounds": 80,
+        "chapters": [
+          "The Courtroom",
+          "The Accused",
+          "The Evidence",
+          "The Witness",
+          "The Motive",
+          "The Timeline",
+          "Reasonable Doubt",
+          "The Human Cost",
+          "The Ask",
+          "The Verdict"
+        ]
+      },
+      {
+        "id": "shadow_noir",
+        "title": "Midnight Alibi",
+        "speaker": "MARLOWE",
+        "difficulty": "Intermediate",
+        "voice": "avocado_v2:MAI_03",
+        "rounds": 80,
+        "chapters": [
+          "The Client",
+          "The Photograph",
+          "Rain on Fifth Street",
+          "The Bar",
+          "The Lie",
+          "The Partner",
+          "The Warehouse",
+          "The Confession",
+          "The Choice",
+          "Last Cigarette"
+        ]
+      },
+      {
+        "id": "shadow_space",
+        "title": "Starfall Protocol",
+        "speaker": "REYES",
+        "difficulty": "Intermediate",
+        "voice": "avocado_v2:MAI_01",
+        "rounds": 80,
+        "chapters": [
+          "Captain's Log",
+          "The Signal",
+          "Course Correction",
+          "The Storm",
+          "First Contact",
+          "The Message",
+          "The Choice",
+          "The Descent",
+          "The Discovery",
+          "Homeward"
+        ]
+      }
+    ],
+    "rounds": 560,
+    "chapters": 70,
+    "uniqueClips": 560,
+    "newScenarios": 6,
+    "newUniqueClips": 480,
+    "sharedRoleMappings": 1120,
+    "inputPatchURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/shadow-pack-patch-ba5df1ec.zip",
+    "inputPatchSha256": "ba5df1ec2651691d364fba44c32380afe0fb6be4f6a344b8237f62974f6652de",
+    "inputPatchBytes": 17016750,
+    "browserDecode": {
+      "status": "PASS",
+      "clips": 560,
+      "minRms": 0.0028093968671884396,
+      "maxDurationDifference": 0,
+      "errors": []
+    },
+    "localEngineProbes": [
+      {
+        "scope": "Real audio and actual engine; microphone stubbed; simulated user completion",
+        "scenarioId": "shadow_bond",
+        "microphoneRequests": 0,
+        "duration": 4.632,
+        "sha256": "9a9837651364db940cf781f714a5125d2eb40f1dcbc19fbd0ecc3fd0866a0fd9",
+        "shadowSameText": true,
+        "state": "barista",
+        "round": 9,
+        "waitingAfterPlayback": true,
+        "playbackWallSeconds": 4.71,
+        "playbackPass": true,
+        "nextRoundPass": true,
+        "chapter": "Gearing Up"
+      },
+      {
+        "scope": "Real audio and actual engine; microphone stubbed; simulated user completion",
+        "scenarioId": "shadow_noir",
+        "microphoneRequests": 0,
+        "duration": 3.168,
+        "sha256": "3b0e49b7df4877b7ce8eb386de2f80f911d7343795aaa4e2103e9e7b150d38dc",
+        "shadowSameText": true,
+        "state": "barista",
+        "round": 9,
+        "waitingAfterPlayback": true,
+        "playbackWallSeconds": 3.23,
+        "playbackPass": true,
+        "nextRoundPass": true,
+        "chapter": "The Photograph"
+      },
+      {
+        "scope": "Real audio and actual engine; microphone stubbed; simulated user completion",
+        "scenarioId": "shadow_space",
+        "microphoneRequests": 0,
+        "duration": 4.032,
+        "sha256": "56a60fb82e31901e705e3872adb9ba9fad7254fe7ea39e18151111b253e1b26a",
+        "shadowSameText": true,
+        "state": "barista",
+        "round": 9,
+        "waitingAfterPlayback": true,
+        "playbackWallSeconds": 4.09,
+        "playbackPass": true,
+        "nextRoundPass": true,
+        "chapter": "The Signal"
+      },
+      {
+        "scope": "Real audio and actual engine; microphone stubbed; simulated user completion",
+        "scenarioId": "shadow_court",
+        "microphoneRequests": 0,
+        "duration": 4.032,
+        "sha256": "43d02e877b05c83678931ff890334223edc5773ac4cdaf1b448802390f8f5266",
+        "shadowSameText": true,
+        "state": "barista",
+        "round": 9,
+        "waitingAfterPlayback": true,
+        "playbackWallSeconds": 4.1,
+        "playbackPass": true,
+        "nextRoundPass": true,
+        "chapter": "The Accused"
+      },
+      {
+        "scope": "Real audio and actual engine; microphone stubbed; simulated user completion",
+        "scenarioId": "shadow_chef",
+        "microphoneRequests": 0,
+        "duration": 7.008,
+        "sha256": "e632f39448a740db6323835efa3e60aa30239c1026a0d2c6d45a4b0c22e68e76",
+        "shadowSameText": true,
+        "state": "barista",
+        "round": 9,
+        "waitingAfterPlayback": true,
+        "playbackWallSeconds": 7.07,
+        "playbackPass": true,
+        "nextRoundPass": true,
+        "chapter": "The Ingredients"
+      },
+      {
+        "scope": "Real audio and actual engine; microphone stubbed; simulated user completion",
+        "scenarioId": "shadow_coach",
+        "microphoneRequests": 0,
+        "duration": 3.96,
+        "sha256": "2df9866704991a685063d4fc9537d9f8d353bf96cb6ba81a5c3199c4f078eaf9",
+        "shadowSameText": true,
+        "state": "barista",
+        "round": 9,
+        "waitingAfterPlayback": true,
+        "playbackWallSeconds": 4.02,
+        "playbackPass": true,
+        "nextRoundPass": true,
+        "chapter": "The Score"
+      },
+      {
+        "scope": "Real audio and actual engine; microphone stubbed; simulated user completion",
+        "scenarioId": "shadow_comic",
+        "microphoneRequests": 0,
+        "duration": 4.848,
+        "sha256": "f3c9540cdbf90ff3bf6481be1667ff1e6789bac3001de8bde2a619f577c5b61a",
+        "shadowSameText": true,
+        "state": "barista",
+        "round": 9,
+        "waitingAfterPlayback": true,
+        "playbackWallSeconds": 4.91,
+        "playbackPass": true,
+        "nextRoundPass": true,
+        "chapter": "The Opener"
+      }
+    ],
+    "checks": "Eight Node suites pass; 2728 mappings, 2168 unique files, 1364 rounds; all thirteen authored start/replay/reverse orders; Lucy repair retained",
+    "limits": "Microphone stubbed and completion simulated; no new Redmi human acceptance or full 60-minute run. American English original stories, not movie soundtracks. VAD does not grade pronunciation."
   }
 }

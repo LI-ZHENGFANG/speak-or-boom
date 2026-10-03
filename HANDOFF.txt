@@ -1,5 +1,5 @@
 当前维护版本：v4.0。以下旧版日期记录仅代表对应版本，不能作 v4 设备验收证据。
-全部七场景保持编写顺序；随机排序代码已移除，不得重新加入。使用入口保持原网址。
+全部十三场景保持编写顺序；随机排序代码已移除，不得重新加入。使用入口保持原网址。
 
 Speak or Boom · 开发交接（2026-10-03）
 作者及版权所有者：LI ZHENGFANG
@@ -136,3 +136,14 @@ Nightfall公开上线完成：应用提交d6ade05，Pages任务37144171656成功
 SHA-256：9dc5a31a2b604d1cd7134370570667aacfcb3d56c4a1e518c07e6910eb9f23f4
 字节数：64407155
 历史v4/Lucy版本和原始补丁的固定URL保留；最新资料读取GitHub main与档案站/api/project。
+
+2026-10-04 七故事 Shadowing 合集（版本保持v4.0）：
+Nightfall、Midnight Alibi、Starfall Protocol、The Verdict、Fire & Thyme、Fourth Quarter、Open Mic。
+每个80轮、10章，听一句后读完全相同的字幕；两方共用同一录音，互换角色仍为原句。
+应用合计13场景、1364轮、2728条角色映射、2168个独立MP3。此合集替代旧Nightfall单独补丁，旧固定下载URL保留。
+所有场景按编写顺序开始、跨章、循环与互换角色，绝对禁止随机。
+原有台词和配音未被改写；Lucy movies-008修复保持6.24秒与原校验值。
+八组Node检查通过；560条跟读录音浏览器解码通过；七场景真实播放器与回合函数第8轮模拟读完后进入第9轮及第二章。
+诊断未请求麦克风，不代表本轮真人/红米验收；未逐条人工听审。60分钟按序循环，不是60分钟全新台词。
+原入口：https://li-zhengfang.github.io/speak-or-boom/ 。维护看main最新RELEASE-STATUS.json、HANDOFF.txt、downloads/shadow-pack-release.json。
+完整ZIP是不可变的发布时快照；最终上线状态以main及档案站为准。

@@ -39,8 +39,8 @@ vm.runInContext(part('function agentLine(', '/* ---- KTV')+
   }
   verified++;
   }
-  assert.equal(verified,7);
+  assert.equal(verified,13);
   const drills=[{id:'a',chapter:'A'},{id:'b',chapter:'B'},{id:'c',chapter:'B'}];
   assert.equal(c.buildPlayOrder(drills,{}).map(r=>r.id).join(','),'a,b,c','Even a future scenario without ordered metadata must preserve order');
-  console.log('PASS: all seven actual session starts, full replays and reversed roles preserve every dialogue; no random fallback.');
+  console.log('PASS: all thirteen actual session starts, full replays and reversed roles preserve every dialogue; no random fallback.');
 })().catch(e=>{console.error(e);process.exitCode=1;});
