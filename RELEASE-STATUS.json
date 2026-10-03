@@ -39,16 +39,23 @@
   },
   "wechatArticle": {
     "status": "published",
-    "images": 13,
-    "photographicIllustrations": 8,
+    "images": 15,
+    "photographicIllustrations": 10,
     "realAppScreenshots": 5,
+    "originalStorySceneImages": 2,
     "account": "方寸拾雅",
     "title": "我做了一台“英语跑步机”，从一杯咖啡开始",
-    "publishedAtDisplayed": "2026-10-03 06:32 Asia/Shanghai",
+    "publishedAtDisplayed": "2026-10-03 10:28 Asia/Shanghai",
     "method": "User-authorized Redmi WeChat native Write Article entry",
-    "verification": "Publication progress finished; article appears in native Works list with coffee cover and read count 1",
+    "replacesDeletedArticle": {
+      "publishedAtDisplayed": "2026-10-03 06:32 Asia/Shanghai",
+      "deletedAtObserved": "2026-10-03 10:25 Asia/Shanghai"
+    },
+    "verification": "Native published reader shows 10:28 timestamp; Works list shows exactly one article with retained coffee cover",
     "articleURL": null,
-    "productURL": "https://li-zhengfang.github.io/speak-or-boom/"
+    "productURL": "https://li-zhengfang.github.io/speak-or-boom/",
+    "content": "Continuous English exposure, speaking treadmill, silence countdown, original Ship It! Ep.1, practical use guide; product/download links at beginning",
+    "sceneImageCaptions": "Original fictional story scene illustrations, not actual film or TV production stills"
   },
   "humanListening": "Not every clip has been manually audited",
   "archiveSite": {

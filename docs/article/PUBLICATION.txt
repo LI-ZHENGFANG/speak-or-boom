@@ -1,14 +1,15 @@
-方寸拾雅 · 首篇已发表
+方寸拾雅 · 首篇更新已发表
 标题：我做了一台“英语跑步机”，从一杯咖啡开始
 署名：LI ZHENGFANG
-显示发布时间：2026-10-03 06:32（北京时间）
-发布入口：红米微信原生“作品 → 写文章”。作品列表已显示文章与阅读数。
-正文 13 图：8 张摄影风格创作配图，5 张真实软件界面；咖啡馆封面。
-纽约段明确是想象场景，配图没有宣称作者亲自拍摄。
+显示发布时间：2026-10-03 10:28（北京时间）
+按用户授权删除旧篇后重新发表；作品列表仅保留新版一篇，保留原标题与咖啡馆封面。
+正文 15 图：10 张摄影风格原创配图（含 2 张虚构剧情场景图），5 张真实软件界面。
+正文已整体复核，按开口难题、持续环境、倒计时、原创剧情、使用方法连贯展开。
+开头提供作品网页与 ZIP 下载；新剧情是 Ship It! 第一集，10 场、140 轮、两方配音。
+60 分钟为含重复材料的持续训练；没有宣称真实电影剧本或演员录音。
 练习网址：https://li-zhengfang.github.io/speak-or-boom/
-作品页面提供完整 ZIP 下载。微信中可复制该网址到 Chrome 练习。
-未提取永久文章链接；可在微信 → 我 → 作品 → 方寸拾雅的文章中查看或分享。
-本包是可维护的本地备份，平台排版与此 HTML 可能略有不同。
+永久文章链接未提取，可从微信“我 → 作品 → 方寸拾雅”查看或分享。
+本地 HTML 保留实际发布的图片顺序；平台布局可能略有不同。
 
 图片顺序：
 1. article-photo-lake.png
@@ -19,8 +20,10 @@
 6. article-photo-hotel.png
 7. article-countdown.png
 8. article-photo-path.png
-9. article-photo-cinema.png
-10. article-mic-trial.png
-11. article-photo-desk.png
-12. article-guide.png
-13. article-voice-pause.png
+9. article-story-morning.png
+10. article-story-pitch.png
+11. article-mic-trial.png
+12. article-photo-desk.png
+13. article-guide.png
+14. article-voice-pause.png
+15. article-photo-cinema.png
