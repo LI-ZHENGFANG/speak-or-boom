@@ -48,20 +48,9 @@ function practiceRounds(rounds) {
   }));
 }
 function speakerLabel(round, sc) { return String(round.speaker || sc.speaker || 'VOICE').toUpperCase(); }
-// Continuous stories keep their order. Other scenarios shuffle chapters.
+// Always preserve authored dialogue order, including first play and every replay.
 function buildPlayOrder(rounds, scenario) {
-  if (scenario && scenario.ordered) return rounds.slice();
-  const byChapter = [];
-  const seen = Object.create(null);
-  rounds.forEach(r => {
-    if (!seen[r.chapter]) { seen[r.chapter] = []; byChapter.push(seen[r.chapter]); }
-    seen[r.chapter].push(r);
-  });
-  for (let i = byChapter.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const t = byChapter[i]; byChapter[i] = byChapter[j]; byChapter[j] = t;
-  }
-  return byChapter.flat();
+  return rounds.slice();
 }
 
 /* ---- KTV word timing model ----
@@ -85,7 +74,7 @@ const G = {
   scenarioId: 'coffee',
   reverseRoles: false,
   scenario: null,
-  rounds: [],             // active play order (reshuffled each loop)
+  rounds: [],             // authored order on every pass
   roundIdx: 0,
   loop: 1,
   totalMs: 10 * 60 * 1000,
@@ -604,7 +593,7 @@ async function runRound() {
   // --- barista phase: silence timer MUST NOT run here ---
   G.state = 'barista';
   stopRec();
-  $('chapter-tag').textContent = 'Chapter · ' + round.chapter + (G.loop > 1 ? '  (loop ' + G.loop + (G.scenario && G.scenario.ordered ? ', story replay)' : ', reshuffled)') : '');
+  $('chapter-tag').textContent = 'Chapter · ' + round.chapter + (G.loop > 1 ? '  (loop ' + G.loop + ', story replay)' : '');
   $('who-barista').textContent = '🎙️ ' + speakerLabel(round, G.scenario);
   $('barista-line').textContent = agentLine(round);
   $('barista-line').classList.remove('dim');
@@ -653,7 +642,7 @@ function completeLine() {
   if (G.roundIdx >= G.rounds.length) {
     G.roundIdx = 0; G.loop++;
     G.rounds = buildPlayOrder(practiceRounds(G.scenario.rounds), G.scenario);
-    toast(G.scenario.ordered ? '📜 本集结束 — 按剧情顺序重播（第 ' + G.loop + ' 遍）' : '📜 Script complete — chapters reshuffled for endurance (round ' + G.loop + ')');
+    toast('📜 本轮脚本结束 — 按剧情顺序重播（第 ' + G.loop + ' 遍）');
   }
   runRound();
 }

@@ -69,8 +69,7 @@ Each scenario is a self-contained JS file that registers itself on
 The movies slot now contains **Ship It! Ep.1: Demo Day Disaster**, an original
 workplace sitcom with 10 scenes and 140 rounds. You play Mia and respond to Jake
 and Lucy. Scenes run in story order on every pass, including with reversed roles.
-The other five scenarios continue to shuffle chapters while keeping each
-chapter's dialogue order. The 60-minute option repeats material after a complete
+All six scenarios now preserve their authored chapter order on every pass. The 60-minute option repeats material after a complete
 pass; it is not a one-hour film or a complete TV season.
 
 ## How detection works (MVP)
@@ -88,7 +87,7 @@ barista's TTS is playing, and never during line transitions.
 
 ## Notes / limitations
 
-- 60-minute mode loops the selected scenario with an on-screen notice; Ship It! preserves story order, other scenarios reshuffle chapters
+- 60-minute mode loops the selected scenario with an on-screen notice; all six scenarios preserve authored story/chapter order
   ("looping for endurance") until the timer ends. This includes repeated material.
 - Switching to another app or tab automatically pauses the session.
 - Data (balance, sessions, wins, fails, speaking time, longest win) persists in
@@ -103,7 +102,7 @@ Developer and copyright owner: LI ZHENGFANG.
 
 ## Voice controls
 
-All 804 rounds have both sides voiced: 1,608 bundled MP3 files. Default playback uses the same American English clips on phone and computer. The five everyday scenes use local Kokoro recordings; Ship It! Ep.1 uses Meta AI synthetic voices supplied with the Muse update. These are not human actor or original film recordings; see VOICE-NOTICE.txt for provenance. No voice model or generation dependencies run in the web application.
+All 804 rounds have both sides voiced: 1,608 bundled MP3 files. Default playback uses the same American English clips on phone and computer. All six scenes now use Meta AI synthetic voices supplied with the Muse updates, with a stable voice per character. The five everyday scenes were rewritten and their 1,328 recordings replaced in v4.0; the 280 Ship It! recordings are retained. These are not human actor or original film recordings; see VOICE-NOTICE.txt for provenance. No voice model or generation dependencies run in the web application.
 
 Rate defaults to 0.75; home and pause screens allow 0.60–1.10. 1.00 is the original recording speed. The voice selector also offers device system voices as an explicit alternative. Preferences persist under `speakOrBoom.voice.v1`. Playback must end successfully before the user's silence timer begins. Errors pause the session.
 
@@ -118,3 +117,9 @@ Linux environment, its authorized /opt/hatch/bin/tts service and Node/ffprobe;
 they are not Windows launchers or web runtime dependencies. Do not run the old
 Kokoro manifest builder blindly: it will overwrite this episode's voice mapping.
 See HANDOFF.txt and RELEASE-STATUS.json for actual verification evidence.
+
+
+## v4.0 all-scenes update
+
+Five practical scenes now have longer continuous dialogue and named characters: Sam/Alex, Raj/Jordan, Nora/Daniel, Helen/David, and Marco/Julia. Counts remain 804 rounds / 1,608 clips including Ship It! Ep.1. Every scene is ordered, including replay and role reversal. The Muse ZIP is a patch, missing the application shell and episode audio; download the complete runnable ZIP from the project page for standalone use.
+Historical device acceptance does not establish v4.0 acceptance. See RELEASE-STATUS.json.

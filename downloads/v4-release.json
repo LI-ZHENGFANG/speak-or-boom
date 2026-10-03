@@ -1,0 +1,13 @@
+{
+  "version": "v4.0",
+  "practiceURL": "https://li-zhengfang.github.io/speak-or-boom/",
+  "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/v4-20261003-8b0a1465.zip",
+  "packageSha256": "8b0a14656d25b3548ce60983889c0806b2cdc1dc25f600a81e561636e60edcb3",
+  "packageBytes": 62313541,
+  "inputPatchURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/speak-or-boom-v4-all-scenes.zip",
+  "inputPatchSha256": "359f51af6de9c8e33bbafa730699592a6a7e3b599b2accc7563fdc70bc16bb2a",
+  "inputPatchBytes": 54207136,
+  "packageNote": "Use the complete packageURL for archive registration; inputPatchURL requires an existing repository.",
+  "sourceMatchesPackageNote": "Package release records are snapshots; current GitHub records can be updated after deployment.",
+  "publicationStatus": "awaiting push and public verification"
+}

@@ -1,11 +1,7 @@
-配音生成工具，不是网页运行依赖。
-在 tools 下建立隔离 Python 3.10–3.13 环境，需事先获得安装许可。
-已用版本：kokoro-onnx 0.6.1、lameenc 1.8.4。
-先用 download_voice_hf.py 下载官方模型及音色，再运行 prepare_voice_styles.py。
-生成：python generate_full_voice.py --app-dir .. --model-dir voice-model
-编辑脚本时还须同步 voice-script-manifest.json。
-生成后运行 python build_voice_pack.py --app-dir .. 校验并重建 voice-manifest.js。
-不要提交模型、依赖环境或账号密钥；每个新版本必须校验全部音频及台词映射。
-
-Ship It! Ep.1 使用 Muse 提供的 Meta AI 音频，生成工具需要其 Linux TTS 环境。
-不要用旧的 Kokoro 索引构建程序覆盖新剧集索引；更新时保留其他场景。
+v4.0：所有六场景均已使用 Muse 提供的 Meta AI 合成配音。
+网页运行不需要配音模型、生成工具或第三方 Python 库。
+tools/voice-script-manifest.json 已同步当前全部台词。
+generate_ep1_voice.py 和 rebuild_manifest_ep1.py 仅适用于 Muse 的 Linux 授权 TTS 环境。
+其余 Kokoro 工具仅为历史工具，不适用于重建当前音色索引；不要运行它们覆盖当前 MP3 或 voice-manifest.js。
+修改剧本须生成对应两方音频，保留人物音色并核验台词、大小、哈希及解码。
+不要提交模型、依赖环境、账号或密钥。新增生成依赖需事先获得许可。

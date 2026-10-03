@@ -1,7 +1,11 @@
 Speak or Boom — voiceover provenance
 
 Developer and copyright owner of the application: LI ZHENGFANG.
-The 1,328 clips in the five everyday scenarios were generated locally with Kokoro-82M v1.0, American English,
+Current v4.0: all 1,608 clips use Meta AI synthetic character voices,
+as described in the scenario sections below.
+
+Historical v3.0 recordings (replaced in v4.0) were generated locally
+with Kokoro-82M v1.0, American English,
 using af_heart, af_bella and am_michael styles, native generation speed 0.95.
 These are synthetic voices, not human actor or original film recordings.
 
@@ -24,4 +28,31 @@ production voices, American English, one voice per character:
   LUCY (office manager)                     -> avocado_v2:myrtle (kindly)
 These are synthetic voices. All series dialogue is original writing;
 no film or television scripts were reproduced.
+The per-clip voice id is recorded in voice-manifest.js.
+
+---
+Coffee Shop v2 (coffee scenario), rewritten 2026-10-03:
+All 176 clips (88 rounds x agent/user) were synthesized with Meta AI
+production voices, American English:
+  SAM  (barista)          -> avocado_v2:MAI_02 "Olivia" (friendly)
+  ALEX (customer, player) -> avocado_v2:ronan (casual)
+Dialogue rewritten for longer sentences, richer vocabulary, and a continuous
+narrative arc across 12 ordered chapters. These are synthetic voices.
+The per-clip voice id is recorded in voice-manifest.js.
+
+---
+Airport / Hotel / Job Interview / Restaurant v2, rewritten 2026-10-03:
+All 1152 clips (4 scenarios x 144 rounds x agent/user) were synthesized with
+Meta AI production voices, American English, one voice per character:
+  AIRPORT:   RAJ (agent)    -> avocado_v2:ronan (casual)
+             JORDAN (user)  -> avocado_v2:MAI_01 "Aria" (warm)
+  HOTEL:     NORA (agent)   -> avocado_v2:myrtle (kindly)
+             DANIEL (user)  -> avocado_v2:MAI_03
+  INTERVIEW: HELEN (agent)  -> avocado_v2:MAI_01 "Aria" (warm)
+             DAVID (user)   -> avocado_v2:ronan (casual)
+  RESTAURANT: MARCO (agent) -> avocado_v2:MAI_03
+             JULIA (user)   -> avocado_v2:MAI_02 "Olivia" (friendly)
+All four scenarios rewritten for longer sentences, richer vocabulary, and a
+continuous narrative arc across 12 ordered chapters (ordered: true, no more
+random shuffling). These are synthetic voices.
 The per-clip voice id is recorded in voice-manifest.js.

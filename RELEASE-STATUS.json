@@ -1,33 +1,24 @@
 {
-  "version": "v3.1-ep1",
+  "version": "v4.0",
   "voicePack": {
     "clips": 1608,
     "rounds": 804,
-    "bytes": 46074424,
+    "bytes": 67030832,
     "checks": [
       "text match",
       "file size",
       "sha256",
       "MP3 header",
       "waveform RMS and duration"
-    ]
+    ],
+    "engine": "Meta AI synthetic voices (all six scenes)"
   },
   "regressions": "eight Node suites passed",
   "desktopTrial": "User confirmed Regular temperature is fine. completes after reading",
   "recordedPlayback": "Chrome audition and paused user-line demo reached ended; timer remained paused",
   "publicDeployment": {
-    "status": "published",
-    "url": "https://li-zhengfang.github.io/speak-or-boom/",
-    "appCommit": "72c7289965504395484dffb5b8456b22be53086a",
-    "pagesRun": "37077632626",
-    "pagesConclusion": "success",
-    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/ep1-20261003-9f61cff7.zip",
-    "packageBytes": 42322713,
-    "packageSha256": "9f61cff7df5a7f845c0b2df2ac0dfa4cf1721b4c1c667f132e04c2669bcc57e1",
-    "manifestTextMatches": true,
-    "onlineConsole": "No captured errors or warnings in fresh Chromium homepage, first partner and swapped-role auditions",
-    "onlineBytes": "app.js, movies.js and voice-manifest.js match committed files; public ZIP SHA-256 and byte size match",
-    "browserScope": "Available Codex in-app Chromium; Chrome extension unavailable for this episode audit"
+    "status": "locally verified; awaiting this release push and public-byte verification",
+    "url": "https://li-zhengfang.github.io/speak-or-boom/"
   },
   "mobileRecordedDialogue": {
     "device": "Redmi Turbo 4 / Chrome",
@@ -55,12 +46,13 @@
     "articleURL": null,
     "productURL": "https://li-zhengfang.github.io/speak-or-boom/",
     "content": "Continuous English exposure, speaking treadmill, silence countdown, original Ship It! Ep.1, practical use guide; product/download links at beginning",
-    "sceneImageCaptions": "Original fictional story scene illustrations, not actual film or TV production stills"
+    "sceneImageCaptions": "Original fictional story scene illustrations, not actual film or TV production stills",
+    "contentVersion": "v3.1-ep1; original published article retained"
   },
   "humanListening": "Not every clip has been manually audited",
   "archiveSite": {
     "version": "v3.1-ep1",
-    "status": "synchronized",
+    "status": "Awaiting maintainer registration of v4.0 fixed package URL, SHA-256 and byte count",
     "revisionLookup": "GET /api/project returns the current revision; use it as expectedRevision",
     "sourceFiles": 30,
     "sourceMatchesPackage": true,
@@ -99,12 +91,41 @@
   "previousPublicDeployment": {
     "status": "published",
     "url": "https://li-zhengfang.github.io/speak-or-boom/",
-    "appCommit": "7b4a46b1a895ebefb597bcc93301e835dbc23a73",
-    "pagesRun": "37069077610",
+    "appCommit": "72c7289965504395484dffb5b8456b22be53086a",
+    "pagesRun": "37077632626",
     "pagesConclusion": "success",
-    "packageBytes": 43427220,
-    "packageSha256": "dffc009bdbc633c747140988b1c53c78329728855ded77b67e146e934d33c676",
+    "packageURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/releases/ep1-20261003-9f61cff7.zip",
+    "packageBytes": 42322713,
+    "packageSha256": "9f61cff7df5a7f845c0b2df2ac0dfa4cf1721b4c1c667f132e04c2669bcc57e1",
     "manifestTextMatches": true,
-    "onlineConsole": "No captured errors or warnings on fresh Chrome homepage audition"
+    "onlineConsole": "No captured errors or warnings in fresh Chromium homepage, first partner and swapped-role auditions",
+    "onlineBytes": "app.js, movies.js and voice-manifest.js match committed files; public ZIP SHA-256 and byte size match",
+    "browserScope": "Available Codex in-app Chromium; Chrome extension unavailable for this episode audit"
+  },
+  "allScenesUpdate": {
+    "version": "v4.0",
+    "inputPatchSha256": "359f51af6de9c8e33bbafa730699592a6a7e3b599b2accc7563fdc70bc16bb2a",
+    "inputPatchBytes": 54207136,
+    "inputPatchURL": "https://li-zhengfang.github.io/speak-or-boom/downloads/speak-or-boom-v4-all-scenes.zip",
+    "rewrittenScenes": [
+      "coffee",
+      "airport",
+      "hotel",
+      "interview",
+      "restaurant"
+    ],
+    "regeneratedClips": 1328,
+    "retainedEpisodeClips": 280,
+    "dialogueOrder": "Authored order on all six scenes, first pass, replay and role reversal; random fallback removed",
+    "checks": "Eight Node suites passed; 1608 exact text, SHA-256 and size mappings; all six start/replay/reversed-role sequences verified",
+    "browserDecode": {
+      "status": "PASS",
+      "clips": 1608,
+      "minRms": 0.009572188174923568,
+      "maxDurationDifference": 0.022041666666666515,
+      "errors": []
+    },
+    "browserScope": "Local Codex Chromium decoding and recorded audition; v4 Redmi human acceptance not performed",
+    "packageNote": "Input ZIP is a patch without index.html, style.css or episode audio. Complete ZIP assembled from the merged repository."
   }
 }

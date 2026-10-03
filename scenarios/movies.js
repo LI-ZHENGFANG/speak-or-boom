@@ -8,7 +8,7 @@
     tagline: 'Ep.1: Demo Day Disaster',
     speaker: 'OFFICE',
     difficulty: 'Intermediate',
-    ordered: true, // Continuous story: preserve scene order on every pass.
+    ordered: true,
     rounds: [
       // ---------- Scene 1: Morning Meltdown ----------
       { id: 'movies-001', chapter: 'Morning Meltdown', speaker: 'JAKE',

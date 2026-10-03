@@ -1,0 +1,58 @@
+Speak or Boom — Master Patch v4.0 (all scenes v2)
+================================================
+Single final patch. Supersedes the earlier ordered-patch and coffee-v2-patch.
+
+WHAT CHANGED
+1. All 5 practical scenarios rewritten to the v2 quality standard:
+   - Coffee Shop: 88 rounds (Sam x Alex), 12 ordered chapters
+   - Airport: 144 rounds (Raj x Jordan), 12 ordered chapters
+   - Hotel: 144 rounds (Nora x Daniel), 12 ordered chapters
+   - Job Interview: 144 rounds (Helen x David), 12 ordered chapters
+   - Restaurant: 144 rounds (Marco x Julia), 12 ordered chapters
+   Each is a continuous story with named characters, longer sentences
+   (agent 10-18 words, user 8-14 words), richer vocabulary, no repeated gist.
+2. Chapter order is now fixed (ordered: true) in all 6 scenarios, including
+   Ship It! Ep.1. No more random shuffling of chapters.
+3. All 1328 voice clips regenerated with Meta AI production voices
+   (one stable voice per character). See VOICE-NOTICE.txt for casting.
+4. voice-manifest.js rebuilt: all sections v2, movies (Ep.1) untouched.
+5. scenarios/_FORMAT.md updated with the v2 writing standard.
+
+HOW TO DEPLOY (one push only)
+1. Unzip this package at the root of your local speak-or-boom repo clone.
+   It mirrors the repo layout, so files land in the right places.
+2. Verify with git status: expect modified coffee-script.js,
+   scenarios/airport.js, scenarios/hotel.js, scenarios/interview.js,
+   scenarios/restaurant.js, scenarios/movies.js, scenarios/_FORMAT.md,
+   voice-manifest.js, VOICE-NOTICE.txt, plus new audio files.
+3. Commit and push. GitHub Pages redeploys automatically.
+
+FILES IN THIS PACKAGE
+  coffee-script.js            (v2, replaces root coffee-script.js)
+  scenarios/airport.js        (v2)
+  scenarios/hotel.js          (v2)
+  scenarios/interview.js      (v2)
+  scenarios/restaurant.js     (v2)
+  scenarios/movies.js         (ordered: true added, content unchanged)
+  scenarios/_FORMAT.md        (v2 writing standard)
+  voice-manifest.js           (rebuilt, all sections)
+  VOICE-NOTICE.txt            (updated casting)
+  audio/coffee/*.mp3          (176 clips)
+  audio/airport/*.mp3         (288 clips)
+  audio/hotel/*.mp3           (288 clips)
+  audio/interview/*.mp3       (288 clips)
+  audio/restaurant/*.mp3      (288 clips)
+
+QUALITY CHECKS PASSED
+- All scripts: node --check OK, correct round counts, continuous IDs,
+  word-length ranges, keywords from user lines, no digit characters.
+- Voice: 1328/1328 clips generated, 0 failures, valid MP3, durations sane.
+- 10-round deep test per scenario (50 total incl. coffee): all passed —
+  MP3 valid, duration reasonable, text matches script, voice mapping correct.
+
+ADDENDUM (app.js fix)
+  app.js — buildPlayOrder() now respects scenario.ordered: when true,
+  rounds play in authored chapter order with no shuffling, both on session
+  start and on replay. This is the engine-side half of the ordering fix;
+  without it the ordered:true flags in the scenario files would not take
+  effect. All 6 scenarios ship with ordered: true in this patch.
